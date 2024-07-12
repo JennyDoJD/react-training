@@ -1,3 +1,5 @@
+import './task.css';
+
 export default function Task({
   task: { id, title, state },
   onArchiveTask,
