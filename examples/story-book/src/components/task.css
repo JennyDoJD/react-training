@@ -45,11 +45,33 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-button {
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   cursor: pointer;
 }
 
-input[type='text'] {
+.type-light {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.type-bold {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+
+.type-italic {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+textarea {
   font-size: 14px;
   line-height: 20px;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -106,8 +128,88 @@ input[type='text'] {
   content: '\e65e';
 }
 
+.input-symbol {
+  display: inline-block;
+  position: relative;
+}
+
+.input-symbol.error [class^='icon-'],
+.input-symbol.error [class*=' icon-'] {
+  color: #ff4400;
+}
+
+.input-symbol [class^='icon-'],
+.input-symbol [class*=' icon-'] {
+  left: 1em;
+}
+
+.input-symbol input {
+  padding-left: 3em;
+}
+
+.input-symbol input {
+  width: 100%;
+}
+
+.input-symbol input:focus + [class^='icon-'],
+.input-symbol input:focus + [class*=' icon-'] {
+  color: #2cc5d2;
+}
+
+.input-symbol [class^='icon-'],
+.input-symbol [class*=' icon-'] {
+  transition: all 300ms ease-in;
+  transform: translate3d(0, -50%, 0);
+  background: transparent;
+  color: #aaa;
+  font-size: 1em;
+  height: 1em;
+  position: absolute;
+  top: 50%;
+  width: 1em;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-family: 'percolate';
+
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
 .icon-star:before {
   content: '\e608';
+}
+
+.icon-face-sad:before {
+  content: '\e60f';
+}
+
+.icon-check:before {
+  content: '\e65e';
+}
+
+.list-heading {
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  text-transform: uppercase;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  padding-left: 15px;
+  line-height: 40px;
+  background: #f8f8f8;
+  color: #aaa;
+}
+
+.list-heading .icon-sync {
+  opacity: 1;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+  margin-right: 4px;
 }
 
 .list-item {
@@ -190,4 +292,105 @@ input[type='text'] {
 
 .list-item.checked .delete-item {
   display: inline-block;
+}
+
+.loading-item {
+  height: 3rem;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  line-height: 1rem;
+  padding-left: 16px;
+}
+
+.loading-item .glow-checkbox,
+.loading-item .glow-text span {
+  animation: glow 1.5s ease-in-out infinite;
+  background: #eee;
+  color: transparent;
+  cursor: progress;
+  display: inline-block;
+}
+
+.loading-item .glow-checkbox {
+  margin-right: 16px;
+  width: 12px;
+  height: 12px;
+}
+
+.loading-item + .loading-item {
+  border-top: 1px solid #f0f9fb;
+}
+
+.list-items {
+  position: relative;
+  background: white;
+  min-height: 288px;
+}
+
+.list-items .select-placeholder {
+  border: none;
+  width: 48px;
+}
+
+.wrapper-message {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  width: auto;
+  height: auto;
+  transform: translate3d(0, -50%, 0);
+  text-align: center;
+}
+
+.wrapper-message [class^='icon-'],
+.wrapper-message [class*=' icon-'] {
+  font-size: 48px;
+  line-height: 56px;
+  color: #2cc5d2;
+  display: block;
+}
+
+.wrapper-message .title-message {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  color: #4a5568;
+}
+
+.wrapper-message .subtitle-message {
+  font-size: 14px;
+  line-height: 20px;
+  color: #4a5568;
+}
+
+.page.lists-show {
+  min-height: 100vh;
+  background: white;
+}
+
+.page.lists-show nav {
+  background: #d3edf4;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+}
+
+.page.lists-show nav .title-page {
+  font-size: 20px;
+  line-height: 24px;
+  line-height: 2rem;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 800;
+  color: #1c3f53;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
 }
