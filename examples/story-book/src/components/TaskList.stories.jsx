@@ -3,6 +3,7 @@ import * as TaskStories from './Task.stories';
 import { Provider } from 'react-redux';
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
+// A super-simple mock of the state of the store
 export const MockedState = {
   tasks: [
     { ...TaskStories.Default.args.task, id: '1', title: 'Task 1' },
@@ -16,6 +17,7 @@ export const MockedState = {
   error: null,
 };
 
+// A super-simple mock of a redux store
 const Mockstore = ({ taskboxState, children }) => (
   <Provider
     store={configureStore({
@@ -43,7 +45,7 @@ const Mockstore = ({ taskboxState, children }) => (
 export default {
   component: TaskList,
   title: 'TaskList',
-  decorators: [(story) => <div style={{ margin: '3rem' }}>{story()}</div>],
+  decorators: [(story) => <div style={{ padding: '3rem' }}>{story()}</div>],
   tags: ['autodocs'],
   excludeStories: /.*MockedState$/,
 };
