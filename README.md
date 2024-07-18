@@ -2,7 +2,7 @@
 
 ## OVERVIEW
 
-- This document provides requirements and estimation for React Basic (Practice 1).
+- This document provides requirements and estimation for React Basic (Practice 1)
 
 ## TIMELINE
 
@@ -10,12 +10,12 @@
 
 ## TEAM SIZE
 
-- One developer.
+- One developer
 
 ## TARGET
 
-- Apply knowledge to build components based on Figma design.
-- Apply Storybook into practice.
+- Apply knowledge to build components based on Figma design
+- Apply Storybook into practice
 
 ## TECHNICAL STACK
 
@@ -31,7 +31,7 @@
 
 ## DESIGN
 
-- Design: [figma](https://www.figma.com/file/lUFBT5Xi1SPPuDBCnXPd5q/Product-Management?type=design&node-id=0-1&mode=design&t=Q9nNngX2QjAOHZTS-0).
+- Design: [figma](https://www.figma.com/file/lUFBT5Xi1SPPuDBCnXPd5q/Product-Management?type=design&node-id=0-1&mode=design&t=Q9nNngX2QjAOHZTS-0)
 
 ## TASK MANAGEMENT
 
