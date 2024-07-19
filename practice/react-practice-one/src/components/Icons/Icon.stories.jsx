@@ -14,58 +14,59 @@ import SettingIcon from './SettingIcon';
 
 const meta = {
   title: 'COMPONENTS/Common/Icons',
+  tags: ['autodocs'],
 };
 
 export default meta;
 
-export const Add = {
-  render: () => <AddIcon />,
-};
+// AddIcon Storybook
+export const Add = () => <AddIcon />;
+Add.storyName = 'Add icon';
 
-export const Dashboard = {
-  render: () => <DashboardIcon />,
-};
+// DashboardIcon Storybook
+export const Dashboard = () => <DashboardIcon />;
+Dashboard.storyName = 'Dashboard icon';
 
-export const Delete = {
-  render: () => <DeleteIcon />,
-};
+// DeleteIcon Storybook
+export const Delete = () => <DeleteIcon />;
+Delete.storyName = 'Delete icon';
 
-export const Discount = {
-  render: () => <DiscountIcon />,
-};
+// DiscountIcon Storybook
+export const Discount = () => <DiscountIcon />;
+Discount.storyName = 'Discount icon';
 
-export const Edit = {
-  render: () => <EditIcon />,
-};
+// EditIcon Storybook
+export const Edit = () => <EditIcon />;
+Edit.storyName = 'Edit icon';
 
-export const Home = {
-  render: () => <HomeIcon />,
-};
+// HomeIcon Storybook
+export const Home = () => <HomeIcon />;
+Home.storyName = 'Home icon';
 
-export const Logo = {
-  render: () => <LogoIcon />,
-};
+// LogoIcon Storybook
+export const Logo = () => <LogoIcon />;
+Logo.storyName = 'Logo icon';
 
-export const Logout = {
-  render: () => <LogoutIcon />,
-};
+// LogoutIcon Storybook
+export const Logout = () => <LogoutIcon />;
+Logout.storyName = 'Logout icon';
 
-export const Message = {
-  render: () => <MessageIcon />,
-};
+// MessageIcon Storybook
+export const Message = () => <MessageIcon />;
+Message.storyName = 'Message icon';
 
-export const Notification = {
-  render: () => <NotificationIcon />,
-};
+// NotificationIcon Storybook
+export const Notification = () => <NotificationIcon />;
+Notification.storyName = 'Notification icon';
 
-export const Search = {
-  render: () => <SearchIcon />,
-};
+// SearchIcon Storybook
+export const Search = () => <SearchIcon />;
+Search.storyName = 'Search icon';
 
-export const Select = {
-  render: () => <SelectIcon />,
-};
+// SelectIcon Storybook
+export const Select = () => <SelectIcon />;
+Select.storyName = 'Select icon';
 
-export const Setting = {
-  render: () => <SettingIcon />,
-};
+// SettingIcon Storybook
+export const Setting = () => <SettingIcon />;
+Setting.storyName = 'Setting icon';
