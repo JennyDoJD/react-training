@@ -1,0 +1,13 @@
+export { default as AddIcon } from './AddIcon.jsx';
+export { default as DashboardIcon } from './DashboardIcon.jsx';
+export { default as DeleteIcon } from './DeleteIcon.jsx';
+export { default as DiscountIcon } from './DiscountIcon.jsx';
+export { default as EditIcon } from './EditIcon.jsx';
+export { default as HomeIcon } from './HomeIcon.jsx';
+export { default as LogoIcon } from './LogoIcon.jsx';
+export { default as LogoutIcon } from './LogoutIcon.jsx';
+export { default as MessageIcon } from './MessageIcon.jsx';
+export { default as NotificationIcon } from './NotificationIcon.jsx';
+export { default as SearchIcon } from './SearchIcon.jsx';
+export { default as SelectIcon } from './SelectIcon.jsx';
+export { default as SettingIcon } from './SettingIcon.jsx';
