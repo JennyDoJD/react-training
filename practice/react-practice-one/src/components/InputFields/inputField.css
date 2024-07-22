@@ -1,11 +1,7 @@
-.input-form {
-  border: 1px solid var(--border-color-tertiary);
-  border-radius: var(--border-radius-primary);
-  padding: 14px;
-  background-color: var(--background-color-tertiary);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-lg);
+.input-container {
+  border: none;
   color: var(--text-color-brown);
+  flex: 1;
   outline: none;
+  background-color: var(--background-color-tertiary);
 }
