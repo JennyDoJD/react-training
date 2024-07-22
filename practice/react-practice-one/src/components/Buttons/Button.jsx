@@ -15,7 +15,7 @@ const Button = ({
   onClick,
 }) => {
   return (
-    <button className={`btn btn-${variant}  ${className}`} onClick={onClick}>
+    <button className={`btn btn-${variant} ${className}`} onClick={onClick}>
       {label}
       {icon && icon}
     </button>
