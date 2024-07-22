@@ -1,0 +1,21 @@
+.toast {
+  cursor: pointer;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: var(--border-radius-primary);
+  font-size: var(--font-size-xs);
+  color: var(--text-color-primary);
+  text-align: center;
+  z-index: 1;
+
+  &.error {
+    background-color: var(--background-color-dark-red);
+  }
+
+  &.success {
+    background-color: var(--background-color-green);
+  }
+}
