@@ -1,16 +1,16 @@
 .btn {
   cursor: pointer;
-  border-radius: var(--primary-border-radius);
+  border-radius: var(--border-radius-primary);
   padding: 14px 23px;
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   line-height: var(--line-height-lg);
   font-weight: var(--font-weight-semibold);
 }
 
 .btn-primary {
-  border: 1px solid var(--secondary-border-color);
-  background-color: var(--primary-background-color);
-  color: var(--secondary-text-color);
+  border: 1px solid var(--border-color-secondary);
+  background-color: var(--background-color-primary);
+  color: var(--text-color-secondary);
 
   &:hover {
     background-color: var(--background-color-dark-grayish-blue);
@@ -20,8 +20,8 @@
 .btn-secondary {
   border: none;
   box-shadow: 0 8px 24px var(--background-color-light-red);
-  background-color: var(--secondary-background-color);
-  color: var(--primary-text-color);
+  background-color: var(--background-color-secondary);
+  color: var(--text-color-primary);
 
   &:hover {
     background-color: var(--background-color-light-pink);
@@ -33,10 +33,10 @@
   justify-content: center;
   gap: 8px;
   border: none;
-  border-radius: 0px 0px 8px 8px;
+  border-radius: var(--border-radius-tertiary);
   padding: 16px 69px;
   background-color: var(--background-color-light-red);
-  color: var(--secondary-text-color);
+  color: var(--text-color-secondary);
 
   &:hover {
     background-color: var(--background-color-light-red-orange);
