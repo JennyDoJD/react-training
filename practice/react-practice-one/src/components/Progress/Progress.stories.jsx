@@ -1,4 +1,4 @@
-import CircularProgress from './Progress';
+import Progress from './Progress';
 
 const meta = {
   title: 'COMPONENTS/Common/Progress',
@@ -7,5 +7,5 @@ const meta = {
 
 export default meta;
 
-export const Progress = () => <CircularProgress />;
-Progress.args = {};
+export const Default = () => <Progress />;
+Default.args = {};

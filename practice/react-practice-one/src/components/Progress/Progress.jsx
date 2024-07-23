@@ -1,7 +1,7 @@
 /* Import CSS */
 import './progress.css';
 
-const CircularProgress = () => {
+const Progress = () => {
   return (
     <div className="progress">
       <div className="progress-loading"></div>
@@ -10,4 +10,4 @@ const CircularProgress = () => {
   );
 };
 
-export default CircularProgress;
+export default Progress;
