@@ -21,8 +21,8 @@
 }
 
 .text-desc {
-  color: var(--brown-text-color);
-  font-size: var(--font-size-sm);
+  color: var(--text-color-brown);
+  font-size: var(--line-height-xs);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-lg);
 }
