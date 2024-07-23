@@ -1,10 +1,13 @@
 /* Import dependencies */
 import PropTypes from 'prop-types';
 
+/* Import constants*/
+import { PROGRESS_TEXT } from '../constants';
+
 /* Import CSS */
 import './progress.css';
 
-const Progress = ({ text = 'Loading...' }) => {
+const Progress = ({ text = PROGRESS_TEXT.default }) => {
   return (
     <div className="progress">
       <div className="progress-loading"></div>
@@ -14,7 +17,7 @@ const Progress = ({ text = 'Loading...' }) => {
 };
 
 Progress.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.oneOf(Object.values(PROGRESS_TEXT)),
 };
 
 export default Progress;
