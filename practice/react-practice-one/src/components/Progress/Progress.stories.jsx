@@ -1,5 +1,7 @@
 import Progress from './Progress';
 
+import { PROGRESS_TEXT } from '../constants';
+
 const meta = {
   title: 'COMPONENTS/Common/Progress',
   tags: ['autodocs'],
@@ -7,7 +9,7 @@ const meta = {
 
 export default meta;
 
-export const Default = () => <Progress />;
+export const Default = (args) => <Progress {...args} />;
 Default.args = {
-  text: 'Loading...',
+  text: PROGRESS_TEXT.default,
 };
