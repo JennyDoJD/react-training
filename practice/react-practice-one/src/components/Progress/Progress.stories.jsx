@@ -8,4 +8,6 @@ const meta = {
 export default meta;
 
 export const Default = () => <Progress />;
-Default.args = {};
+Default.args = {
+  text: 'Loading...',
+};
