@@ -8,14 +8,14 @@ const meta = {
     variant: {
       control: {
         type: 'select',
-        options: Object.values(TEXT_VARIANTS),
       },
+      options: Object.values(TEXT_VARIANTS),
     },
     size: {
       control: {
         type: 'select',
-        options: Object.values(COMPONENT_SIZES),
       },
+      options: Object.values(COMPONENT_SIZES),
     },
     children: { control: 'text' },
   },
@@ -24,4 +24,8 @@ const meta = {
 export default meta;
 
 export const Default = (args) => <Text {...args} />;
-Default.args = {};
+Default.args = {
+  children: '',
+  variant: TEXT_VARIANTS.default,
+  size: COMPONENT_SIZES.default,
+};
