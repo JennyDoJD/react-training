@@ -1,4 +1,5 @@
 import SearchBar from './SearchBar';
+import { PLACEHOLDER_TEXT } from '../../constants';
 
 const meta = {
   title: 'COMPONENTS/Common/SearchBar',
@@ -7,5 +8,7 @@ const meta = {
 
 export default meta;
 
-export const Search = (args) => <SearchBar {...args} />;
-Search.args = {};
+export const Default = (args) => <SearchBar {...args} />;
+Default.args = {
+  placeholder: PLACEHOLDER_TEXT.primary,
+};
