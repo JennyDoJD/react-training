@@ -7,10 +7,10 @@ export const PLACEHOLDER_TEXT = {
  * Define variants of button
  */
 export const BUTTON_VARIANTS = {
-  primary: 'primary',
-  secondary: 'secondary',
-  contained: 'contained',
-}
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  CONTAINED: 'contained',
+};
 
 /**
  * Define size of component
