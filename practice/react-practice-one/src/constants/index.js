@@ -3,7 +3,7 @@
  */
 export const MODAL_TITLES = {
   delete: 'Are you sure you want to delete this food?',
-}
+};
 
 /**
  * Define size of component
@@ -25,4 +25,11 @@ export const TEXT_VARIANTS = {
   title: 'title',
   desc: 'desc',
   name: 'name',
+};
+
+/**
+ * Define the value of the progress text
+ */
+export const PROGRESS_TEXT = {
+  default: 'Loading...',
 };
