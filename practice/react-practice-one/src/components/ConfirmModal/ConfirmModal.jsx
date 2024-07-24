@@ -7,6 +7,7 @@ import './confirmModal.css';
 /* Import constants */
 import { MODAL_TITLES } from '../../constants';
 
+/* Import components */
 import Text from '../Text/Text.jsx';
 import Button from '../Buttons/Button.jsx';
 
