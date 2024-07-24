@@ -1,7 +1,23 @@
 .input-overlay {
+  position: relative;
+}
+
+.input-content {
   border: none;
   color: var(--text-color-brown);
   flex: 1;
   outline: none;
   background-color: var(--background-color-tertiary);
+}
+
+.input-error {
+  border: 1px solid var(--text-color-red);
+}
+
+.error-message {
+  color: var(--text-color-red);
+  font-size: 12px;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
