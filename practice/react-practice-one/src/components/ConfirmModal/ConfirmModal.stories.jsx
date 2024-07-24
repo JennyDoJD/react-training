@@ -13,10 +13,6 @@ const meta = {
   argTypes: {
     id: { control: 'text' },
     title: { control: 'text' },
-    isMutating: {
-      control: 'boolean',
-      description: 'Determine whether the form is mutating or not',
-    },
     isOpen: {
       control: 'boolean',
       description: 'Determine whether the modal is open or not',
@@ -62,5 +58,4 @@ Default.args = {
   id: '1',
   title: MODAL_TITLES.delete,
   isOpen: true,
-  isMutating: false,
 };
