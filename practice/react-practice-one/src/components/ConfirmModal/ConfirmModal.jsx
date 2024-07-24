@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 /* Import CSS */
 import './confirmModal.css';
 
-import { MODAL_TITLES } from '../../../constants';
+import { MODAL_TITLES } from '../../constants';
 
 import Text from '../../Texts/Text';
 import Button from '../../Buttons/Button';
