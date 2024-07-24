@@ -21,7 +21,7 @@ const Toast = ({ message, name, duration = 3000, onClose }) => {
 
 Toast.propTypes = {
   message: PropTypes.oneOf(Object.values(MESSAGES)),
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   duration: PropTypes.number,
   onClose: PropTypes.func.isRequired,
 };
