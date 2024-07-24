@@ -1,4 +1,4 @@
-.modal-container {
+.modal-overlay {
   background-color: var(--background-color-dark);
   border-radius: var(--border-radius-secondary);
   position: fixed;
@@ -14,17 +14,19 @@
   padding: 21px 35px 30px 31px;
 }
 
-.modal-title {
-  padding-bottom: 20px;
-  text-align: center;
-  color: var(--text-color-primary);
-  width: 388px;
-}
-
-.modal-button {
+.modal-actions {
   display: flex;
   justify-content: space-between;
   gap: 8px;
+}
+
+.modal-title {
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-2xl);
+  color: var(--text-color-primary);
 }
 
 .btn-confirm {

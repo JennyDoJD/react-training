@@ -1,39 +1,31 @@
-import Text from '../../Texts/Text';
-import Button from '../../Buttons/Button';
-
 /* Import dependencies */
 import PropTypes from 'prop-types';
 
 /* Import CSS */
 import './confirmModal.css';
 
-/* Import constants */
 import { MODAL_TITLES } from '../../../constants';
 
-const ConfirmModal = ({
-  id,
-  onClose,
-  onSubmit,
-  isMutating,
-  text = MODAL_TITLES.delete,
-}) => {
+import Text from '../../Texts/Text';
+import Button from '../../Buttons/Button';
+
+const ConfirmModal = ({ text, onConfirm, onCancel, isVisible }) => {
   return (
-    <div className="modal-container">
-      <div className="modal-content" id={id}>
-        <Text className="modal-title text-title text-title-md">{text}</Text>
-        <div className="modal-button">
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <Text className="modal-title">{text}</Text>
+        <div className="modal-actions">
           <Button
-            className="btn-confirm"
-            variant="primary"
+            variant="secondary"
             label="Cancel"
-            onClick={onClose}
+            onClick={onCancel}
+            className="btn-confirm"
           />
           <Button
-            className="btn-confirm"
-            variant="secondary"
+            variant="primary"
             label="Yes"
-            onClick={onSubmit}
-            disabled={isMutating}
+            onClick={onConfirm}
+            className="btn-confirm"
           />
         </div>
       </div>
@@ -42,12 +34,10 @@ const ConfirmModal = ({
 };
 
 ConfirmModal.propTypes = {
-  id: PropTypes.string,
-  onClose: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
-  isMutating: PropTypes.bool,
-  isOpen: PropTypes.bool.isRequired,
   text: PropTypes.oneOf(Object.values(MODAL_TITLES)).isRequired,
+  onConfirm: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
+  isVisible: PropTypes.bool.isRequired,
 };
 
 export default ConfirmModal;
