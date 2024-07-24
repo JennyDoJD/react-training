@@ -1,4 +1,5 @@
 import Toast from './Toast';
+import { MESSAGES } from '../constants/message';
 
 const meta = {
   title: 'COMPONENTS/Common/Toasts',
@@ -9,12 +10,12 @@ export default meta;
 
 export const SuccessToast = (args) => <Toast {...args} />;
 SuccessToast.args = {
-  type: 'success',
-  message: 'Succeed to add the product!',
+  name: 'success',
+  message: MESSAGES.ADD_PRODUCT_SUCCESS_MESSAGE,
 };
 
 export const ErrorToast = (args) => <Toast {...args} />;
 ErrorToast.args = {
-  type: 'error',
-  message: 'Failed to add the product!',
+  name: 'error',
+  message: MESSAGES.ADD_PRODUCT_FAILED_MESSAGE,
 };
