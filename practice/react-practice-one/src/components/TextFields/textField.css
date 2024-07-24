@@ -1,0 +1,7 @@
+.input-overlay {
+  border: none;
+  color: var(--text-color-brown);
+  flex: 1;
+  outline: none;
+  background-color: var(--background-color-tertiary);
+}
