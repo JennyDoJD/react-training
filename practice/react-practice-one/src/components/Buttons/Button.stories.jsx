@@ -1,6 +1,11 @@
-import Button from './Button';
-import { BUTTON_VARIANTS } from '../../constants';
+/* Import dependencies */
 import { action } from '@storybook/addon-actions';
+
+/* Import components */
+import Button from './Button';
+
+/* Import constants */
+import { BUTTON_VARIANTS } from '../../constants';
 
 const meta = {
   title: 'COMPONENTS/Common/Buttons',
