@@ -1,4 +1,4 @@
-import InputField from './TextField';
+import TextField from './TextField';
 
 const meta = {
   title: 'COMPONENTS/Common/InputField',
@@ -7,5 +7,5 @@ const meta = {
 
 export default meta;
 
-export const Input = (args) => <InputField {...args} />;
-Input.args = {};
+export const Default = (args) => <TextField {...args} />;
+Default.args = {};
