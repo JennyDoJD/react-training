@@ -8,8 +8,8 @@ import { COMPONENT_SIZES, TEXT_VARIANTS } from '../../constants';
 import './text.css';
 
 const Text = ({
-  variant = TEXT_VARIANTS.default,
-  size = COMPONENT_SIZES.default,
+  variant = TEXT_VARIANTS.DEFAULT,
+  size = COMPONENT_SIZES.DEFAULT,
   className = '',
   children,
 }) => {
