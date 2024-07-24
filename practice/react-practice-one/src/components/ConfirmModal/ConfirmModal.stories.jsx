@@ -1,5 +1,10 @@
+/* Import dependencies */
 import { useState } from 'react';
+
+/* Import constants */
 import { MODAL_TITLES } from '../../constants';
+
+/* Import components */
 import ConfirmModal from './ConfirmModal';
 
 const meta = {
