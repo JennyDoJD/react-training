@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MODAL_TITLES } from '../../constants';
 import ConfirmModal from './ConfirmModal';
 
@@ -6,39 +6,56 @@ const meta = {
   title: 'COMPONENTS/Common/ConfirmModal',
   tags: ['autodocs'],
   argTypes: {
-    text: { control: 'text' },
-    isVisible: { control: 'boolean' },
+    id: { control: 'text' },
+    title: { control: 'text' },
+    isMutating: {
+      control: 'boolean',
+      description: 'Determine whether the form is mutating or not',
+    },
+    isOpen: {
+      control: 'boolean',
+      description: 'Determine whether the modal is open or not',
+    },
+    onSubmit: {
+      description: 'Function to submit the form',
+    },
+    onClose: {
+      description: 'Function to close the modal',
+    },
   },
 };
 
 export default meta;
 
 const Template = (args) => {
-  const [isVisible, setIsVisible] = useState(args.isVisible);
+  const [isOpen, setIsOpen] = useState(args.isOpen);
 
   const handleConfirm = () => {
-    setIsVisible(false);
+    setIsOpen(true);
+    args.onSubmit();
   };
 
   const handleCancel = () => {
-    setIsVisible(false);
+    setIsOpen(false);
+    args.onClose();
   };
 
   return (
-    <div>
-      <button onClick={() => setIsVisible(true)}>Show Modal</button>
+    <>
       <ConfirmModal
         {...args}
-        isVisible={isVisible}
-        onConfirm={handleConfirm}
-        onCancel={handleCancel}
+        onSubmit={handleConfirm}
+        onClose={handleCancel}
+        isOpen={isOpen}
       />
-    </div>
+    </>
   );
 };
 
-export const Default = (args) => <ConfirmModal {...args} />;
+export const Default = (args) => <Template {...args} />;
 Default.args = {
-  text: MODAL_TITLES.delete,
-  isVisible: true,
+  id: '1',
+  title: MODAL_TITLES.delete,
+  isOpen: true,
+  isMutating: false,
 };
