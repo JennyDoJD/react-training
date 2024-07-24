@@ -1,5 +1,5 @@
 import SearchIcon from '../Icons/SearchIcon';
-import InputField from '../InputFields/InputField';
+import TextField from '../TextFields/TextField';
 
 /* Import constants */
 import { PLACEHOLDER_TEXT } from '../../constants';
@@ -10,11 +10,11 @@ import PropTypes from 'prop-types';
 /* Import CSS */
 import './searchBar.css';
 
-const SearchBar = ({ placeholder }) => {
+const SearchBar = ({ placeholder = PLACEHOLDER_TEXT.DEFAULT }) => {
   return (
     <div className="search-overlay input-form">
       <SearchIcon />
-      <InputField type="search" placeholder={placeholder} />
+      <TextField type="search" placeholder={placeholder} />
     </div>
   );
 };
