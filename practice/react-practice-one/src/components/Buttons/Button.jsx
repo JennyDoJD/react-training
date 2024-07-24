@@ -8,7 +8,7 @@ import { BUTTON_VARIANTS } from '../../constants';
 import './button.css';
 
 const Button = ({
-  variant = BUTTON_VARIANTS.primary,
+  variant = BUTTON_VARIANTS.PRIMARY,
   icon,
   label,
   className = '',
