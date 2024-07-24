@@ -1,6 +1,6 @@
 import Progress from './Progress';
 
-import { PROGRESS_TEXT } from '../constants';
+import { PROGRESS_TEXT } from '../../constants';
 
 const meta = {
   title: 'COMPONENTS/Common/Progress',
