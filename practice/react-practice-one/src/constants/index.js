@@ -1,26 +1,26 @@
 /** Define value for placeholder */
 export const PLACEHOLDER_TEXT = {
-  default: 'Search for food, coffee, etc..',
-}
+  DEFAULT: 'Search for food, coffee, etc..',
+};
 
 /**
  * Define size of component
  */
 export const COMPONENT_SIZES = {
-  default: 'default',
-  small: 'sm',
-  medium: 'md',
-  large: 'lg',
-  extraLarge: 'xl',
-  doubleExtraLarge: '2xl',
+  DEFAULT: 'default',
+  SMALL: 'sm',
+  MEDIUM: 'md',
+  LARGE: 'lg',
+  EXTRA_LARGE: 'xl',
+  DOUBLE_EXTRA_LARGE: '2xl',
 };
 
 /**
  * Define variants of Text
  */
 export const TEXT_VARIANTS = {
-  default: 'default',
-  title: 'title',
-  desc: 'desc',
-  name: 'name',
+  DEFAULT: 'default',
+  TITLE: 'title',
+  DESC: 'desc',
+  NAME: 'name',
 };
