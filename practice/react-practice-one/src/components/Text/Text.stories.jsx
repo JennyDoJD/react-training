@@ -26,6 +26,6 @@ export default meta;
 export const Default = (args) => <Text {...args} />;
 Default.args = {
   children: '',
-  variant: TEXT_VARIANTS.default,
-  size: COMPONENT_SIZES.default,
+  variant: TEXT_VARIANTS.DEFAULT,
+  size: COMPONENT_SIZES.DEFAULT,
 };
