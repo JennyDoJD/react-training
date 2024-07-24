@@ -5,7 +5,8 @@ export const MODAL_TITLES = {
   delete: 'Are you sure you want to delete this food?',
 }
 
- /** Define size of component
+/**
+ * Define size of component
  */
 export const COMPONENT_SIZES = {
   default: 'default',
