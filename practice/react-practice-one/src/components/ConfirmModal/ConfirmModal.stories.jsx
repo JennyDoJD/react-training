@@ -11,7 +11,6 @@ const meta = {
   title: 'COMPONENTS/Common/ConfirmModal',
   tags: ['autodocs'],
   argTypes: {
-    id: { control: 'text' },
     title: { control: 'text' },
     isOpen: {
       control: 'boolean',
@@ -45,9 +44,9 @@ const Template = (args) => {
     <>
       <ConfirmModal
         {...args}
+        isOpen={isOpen}
         onSubmit={handleConfirm}
         onClose={handleCancel}
-        isOpen={isOpen}
       />
     </>
   );
@@ -55,7 +54,6 @@ const Template = (args) => {
 
 export const Default = (args) => <Template {...args} />;
 Default.args = {
-  id: '1',
-  title: MODAL_TITLES.delete,
+  title: MODAL_TITLES.DELETE,
   isOpen: true,
 };
