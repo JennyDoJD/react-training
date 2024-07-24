@@ -4,28 +4,33 @@ import PropTypes from 'prop-types';
 /* Import CSS */
 import './confirmModal.css';
 
+/* Import constants */
 import { MODAL_TITLES } from '../../constants';
 
-import Text from '../../Texts/Text';
-import Button from '../../Buttons/Button';
+import Text from '../Text/Text.jsx';
+import Button from '../Buttons/Button.jsx';
 
-const ConfirmModal = ({ text, onConfirm, onCancel, isVisible }) => {
+const ConfirmModal = ({ id, title, onSubmit, onClose, isMutating, isOpen }) => {
+  if (!isOpen) return null;
+
   return (
-    <div className="modal-overlay">
+    <div className="modal-overlay" id={id}>
       <div className="modal-content">
-        <Text className="modal-title">{text}</Text>
+        <Text className="modal-title">{title}</Text>
         <div className="modal-actions">
           <Button
             variant="secondary"
             label="Cancel"
-            onClick={onCancel}
+            onClick={onClose}
             className="btn-confirm"
+            disabled={isMutating}
           />
           <Button
             variant="primary"
             label="Yes"
-            onClick={onConfirm}
+            onClick={onSubmit}
             className="btn-confirm"
+            disabled={isMutating}
           />
         </div>
       </div>
@@ -34,10 +39,13 @@ const ConfirmModal = ({ text, onConfirm, onCancel, isVisible }) => {
 };
 
 ConfirmModal.propTypes = {
-  text: PropTypes.oneOf(Object.values(MODAL_TITLES)).isRequired,
-  onConfirm: PropTypes.func.isRequired,
-  onCancel: PropTypes.func.isRequired,
-  isVisible: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  title: PropTypes.oneOf(Object.values(MODAL_TITLES)).isRequired,
+  onClose: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  isMutating: PropTypes.bool,
+  isOpen: PropTypes.bool,
 };
 
 export default ConfirmModal;
