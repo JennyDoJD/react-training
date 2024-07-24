@@ -12,7 +12,7 @@ import './searchBar.css';
 
 const SearchBar = ({ placeholder }) => {
   return (
-    <div className="search-container input-form">
+    <div className="search-overlay input-form">
       <SearchIcon />
       <InputField type="search" placeholder={placeholder} />
     </div>
