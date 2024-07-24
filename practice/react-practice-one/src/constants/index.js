@@ -7,7 +7,7 @@ export const PLACEHOLDER_TEXT = {
  * Define titles of modal
  */
 export const MODAL_TITLES = {
-  delete: 'Are you sure you want to delete this food?',
+  DELETE: 'Are you sure you want to delete this food?',
 };
 
 /**
@@ -37,4 +37,13 @@ export const TEXT_VARIANTS = {
  */
 export const PROGRESS_TEXT = {
   default: 'Loading...',
+};
+
+/**
+ * Define variants of button
+ */
+export const BUTTON_VARIANTS = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  CONTAINED: 'contained',
 };
