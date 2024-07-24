@@ -21,15 +21,11 @@
 }
 
 .modal-title {
-  text-align: center;
+  width: 381px;
   padding-bottom: 20px;
   font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-lg);
+  font-size: var(--line-height-xl);
   line-height: var(--line-height-2xl);
   color: var(--text-color-primary);
-}
-
-.btn-confirm {
-  padding-left: 67px;
-  padding-right: 67px;
+  text-align: center;
 }
