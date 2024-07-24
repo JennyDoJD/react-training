@@ -1,7 +1,12 @@
+/* Import dependencies */
 import { action } from '@storybook/addon-actions';
+
+/* Import components */
 import Button from './Button';
-import { BUTTON_VARIANTS } from '../../constants';
 import EditIcon from '../Icons/EditIcon';
+
+/* Import constants */
+import { BUTTON_VARIANTS } from '../../constants';
 
 const meta = {
   title: 'COMPONENTS/Common/ButtonIcons',
