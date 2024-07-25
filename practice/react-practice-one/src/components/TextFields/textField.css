@@ -3,11 +3,16 @@
 }
 
 .input-content {
-  border: none;
-  color: var(--text-color-brown);
   flex: 1;
   outline: none;
   background-color: var(--background-color-tertiary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-lg);
+  color: var(--text-color-brown);
+  border-radius: var(--border-radius-primary);
+  border: 1px solid var(--tertiary-border-color);
+  padding: 14px;
 }
 
 .input-error {
@@ -15,9 +20,11 @@
 }
 
 .error-message {
-  color: var(--text-color-red);
-  font-size: 12px;
   position: absolute;
   top: 100%;
   left: 0;
+  width: 382px;
+  color: var(--text-color-red);
+  font-size: var(--font-size-xs);
+  padding-top: 5px;
 }
