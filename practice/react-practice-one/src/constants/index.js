@@ -33,3 +33,8 @@ export const TEXT_VARIANTS = {
   DESC: 'desc',
   NAME: 'name',
 };
+
+/** Define the value of the progress text */
+export const PROGRESS_TEXT = {
+  default: 'Loading...',
+};
