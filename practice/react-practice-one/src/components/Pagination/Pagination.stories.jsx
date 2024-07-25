@@ -1,5 +1,6 @@
 /* Import dependencies */
 import { action } from '@storybook/addon-actions';
+import { useState } from 'react';
 
 /* Import components */
 import Pagination from './Pagination';
@@ -32,10 +33,26 @@ const meta = {
 
 export default meta;
 
-export const Default = (args) => <Pagination {...args} />;
+const Template = (args) => {
+  const [currentPage, setCurrentPage] = useState(args.currentPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+
+    action('page-changed')(page);
+  };
+
+  return (
+    <Pagination
+      {...args}
+      currentPage={currentPage}
+      onPageChange={handlePageChange}
+    />
+  );
+};
+
+export const Default = (args) => <Template {...args} />;
 Default.args = {
-  currentPage: 2,
   totalRecords: 30,
   pageLimit: 10,
-  onPageChange: action('page-changed'),
 };
