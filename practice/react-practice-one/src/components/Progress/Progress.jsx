@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 /* Import constants*/
-import { PROGRESS_TEXT } from '../constants';
+import { PROGRESS_TEXT } from '../../constants';
 
 /* Import CSS */
 import './progress.css';
