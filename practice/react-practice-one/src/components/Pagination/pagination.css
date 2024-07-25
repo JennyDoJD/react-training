@@ -1,0 +1,4 @@
+.pagination-overlay {
+  display: flex;
+  gap: 8px;
+}
