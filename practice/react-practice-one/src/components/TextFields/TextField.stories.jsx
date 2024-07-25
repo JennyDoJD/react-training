@@ -7,6 +7,13 @@ import TextField from './TextField';
 const meta = {
   title: 'COMPONENTS/Common/TextField',
   tags: ['autodocs'],
+  argTypes: {
+    type: {
+      control: { type: 'select' },
+      options: Object.values(['number', 'text']),
+      description: 'This value specifies the input type',
+    },
+  },
 };
 
 export default meta;
