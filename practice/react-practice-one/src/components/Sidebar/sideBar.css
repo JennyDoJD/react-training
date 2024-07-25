@@ -52,13 +52,13 @@
 
 .active::before {
   top: -12px;
-  box-shadow: 7.5px 7.5px 0 7.5px var(--background-color-dark);
+  box-shadow: 0 7.5px 0 0 var(--background-color-dark);
   border-bottom-right-radius: var(--border-radius-secondary);
 }
 
 .active::after {
   bottom: -12px;
-  box-shadow: 7.5px -7.5px 0 7.5px var(--background-color-dark);
+  box-shadow: 0 -7.5px 0 0 var(--background-color-dark);
   border-top-right-radius: var(--border-radius-secondary);
 }
 
