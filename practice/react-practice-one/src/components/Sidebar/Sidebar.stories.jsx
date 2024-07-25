@@ -6,7 +6,6 @@ import SideBar from './Sidebar';
 
 const meta = {
   title: 'COMPONENTS/Common/SideBar',
-  tags: ['autodocs'],
 };
 
 export default meta;
