@@ -12,7 +12,17 @@ const meta = {
   title: 'COMPONENTS/Common/ButtonIcons',
   tags: ['autodocs'],
   argTypes: {
-    onClick: { action: 'clicked' },
+    onClick: {
+      action: 'clicked',
+      description: 'Function will be called when the button is clicked',
+    },
+    variant: {
+      description: 'This value specifies the variant of the Button',
+    },
+    label: {
+      control: { type: 'text' },
+      description: 'This value specifies the content of the Button',
+    },
   },
 };
 
