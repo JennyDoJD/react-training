@@ -17,6 +17,7 @@ import './sideBar.css';
 const SideBar = ({ onClick, activeItem, setActiveItem }) => {
   const handleClick = (item) => {
     setActiveItem(item);
+
     if (onClick) onClick(item);
   };
 
