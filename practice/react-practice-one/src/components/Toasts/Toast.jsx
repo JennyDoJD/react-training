@@ -1,13 +1,12 @@
-import { useEffect } from 'react';
-
 /* Import dependencies */
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 
 /* Import CSS */
 import './toast.css';
 
 /* Import constants */
-import { MESSAGES } from '../constants/message';
+import { STATUS, MESSAGES } from '../../constants';
 
 const Toast = ({ message, name, duration = 3000, onClose }) => {
   useEffect(() => {
@@ -21,7 +20,7 @@ const Toast = ({ message, name, duration = 3000, onClose }) => {
 
 Toast.propTypes = {
   message: PropTypes.oneOf(Object.values(MESSAGES)),
-  name: PropTypes.string,
+  name: PropTypes.oneOf(Object.values(STATUS)),
   duration: PropTypes.number,
   onClose: PropTypes.func.isRequired,
 };
