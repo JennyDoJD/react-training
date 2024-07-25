@@ -51,3 +51,11 @@ export const MESSAGES = {
   GENERAL_ERROR_MESSAGE:
     'An unexpected error occurred. Please try again later!',
 };
+
+/**
+ * Define status of component
+ */
+export const STATUS = {
+  ERROR: 'error',
+  SUCCESS: 'success',
+};
