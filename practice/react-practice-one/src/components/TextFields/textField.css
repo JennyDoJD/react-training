@@ -11,8 +11,9 @@
   line-height: var(--line-height-lg);
   color: var(--text-color-brown);
   border-radius: var(--border-radius-primary);
-  border: 1px solid var(--tertiary-border-color);
+  border: 1px solid var(--border-color-tertiary);
   padding: 14px;
+  width: 445px;
 }
 
 .input-error {
