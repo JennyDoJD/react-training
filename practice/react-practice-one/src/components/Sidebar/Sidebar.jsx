@@ -1,5 +1,5 @@
 /* Import dependencies */
-import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 /* Import components */
 import LogoIcon from '../Icons/LogoIcon';
@@ -102,6 +102,12 @@ const SideBar = ({ onClick, activeItem, setActiveItem }) => {
       </div>
     </aside>
   );
+};
+
+SideBar.propTypes = {
+  onClick: PropTypes.func,
+  activeItem: PropTypes.string.isRequired,
+  setActiveItem: PropTypes.func.isRequired,
 };
 
 export default SideBar;
