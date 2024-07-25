@@ -1,7 +1,6 @@
 .sidebar-overlay {
-  position: fixed;
-  height: 100%;
-  background-color: var(--primary-background-color);
+  position: absolute;
+  background-color: var(--background-color-primary);
   padding-left: 12px;
 }
 
@@ -16,7 +15,7 @@
   display: inline-block;
   padding: 11px;
   border-radius: 12px;
-  background-color: rgba(235, 150, 106, 0.26);
+  background-color: var(--background-color-light-orange-transparent);
 }
 
 .sidebar-body {
@@ -38,41 +37,40 @@
 }
 
 .active {
-  border-radius: 12px 0 0 12px;
-  background-color: var(--dark-background-color);
+  border-radius: var(--border-radius-quinary);
+  background-color: var(--background-color-dark);
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: -12px;
-    right: 0;
-    box-shadow: 7.5px 7.5px 0 7.5px var(--dark-background-color);
-    border-bottom-right-radius: var(--secondary-border-radius);
-    width: 12px;
-    height: 12px;
-  }
+.active::before,
+.active::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 12px;
+  height: 12px;
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    right: 0;
-    border-top-right-radius: var(--secondary-border-radius);
-    box-shadow: 7.5px -7.5px 0 7.5px var(--dark-background-color);
-    width: 12px;
-    height: 12px;
-  }
+.active::before {
+  top: -12px;
+  box-shadow: 7.5px 7.5px 0 7.5px var(--background-color-dark);
+  border-bottom-right-radius: var(--border-radius-secondary);
+}
+
+.active::after {
+  bottom: -12px;
+  box-shadow: 7.5px -7.5px 0 7.5px var(--background-color-dark);
+  border-top-right-radius: var(--border-radius-secondary);
 }
 
 .nav-link {
   display: inline-block;
-  border-radius: var(--primary-border-radius);
+  border-radius: var(--border-radius-primary);
   padding: 16px;
 }
 
 .active > .nav-link {
   box-shadow: 0 8px 24px rgba(234, 124, 105, 0.32);
-  background-color: var(--secondary-background-color);
+  background-color: var(--background-color-secondary);
 }
 
 .sidebar-footer {
