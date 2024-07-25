@@ -1,3 +1,4 @@
+/* Import components */
 import SearchIcon from '../Icons/SearchIcon';
 import TextField from '../TextFields/TextField';
 

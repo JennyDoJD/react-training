@@ -1,4 +1,7 @@
+/* Import components */
 import Text from './Text';
+
+/* Import constants */
 import { COMPONENT_SIZES, TEXT_VARIANTS } from '../../constants';
 
 const meta = {
@@ -10,12 +13,14 @@ const meta = {
         type: 'select',
       },
       options: Object.values(TEXT_VARIANTS),
+      description: 'This value specifies the variant of the Text',
     },
     size: {
       control: {
         type: 'select',
       },
       options: Object.values(COMPONENT_SIZES),
+      description: 'This value specifies the size of the Text',
     },
     children: { control: 'text' },
   },
