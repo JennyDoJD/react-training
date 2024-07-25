@@ -4,6 +4,15 @@ export const PLACEHOLDER_TEXT = {
 };
 
 /**
+ * Define variants of button
+ */
+export const BUTTON_VARIANTS = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  CONTAINED: 'contained',
+};
+
+/**
  * Define size of component
  */
 export const COMPONENT_SIZES = {
