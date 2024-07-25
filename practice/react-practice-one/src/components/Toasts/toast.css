@@ -1,9 +1,6 @@
 .toast {
   cursor: pointer;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: max-content;
   padding: 10px;
   border-radius: var(--border-radius-primary);
   font-size: var(--font-size-xs);
