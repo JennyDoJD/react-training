@@ -9,6 +9,7 @@ import './pagination.css';
 
 const Pagination = ({ currentPage, totalRecords, pageLimit, onPageChange }) => {
   const totalPages = Math.ceil(totalRecords / pageLimit);
+  const pageRange = 5;
 
   const handleClick = (page) => {
     if (page !== currentPage) {
@@ -16,21 +17,29 @@ const Pagination = ({ currentPage, totalRecords, pageLimit, onPageChange }) => {
     }
   };
 
-  const renderButtons = () => {
-    const buttons = [];
+  const getPageNumbers = () => {
+    const startPage = Math.max(1, currentPage - Math.floor(pageRange / 2));
+    const endPage = Math.min(totalPages, startPage + pageRange - 1);
 
-    for (let i = 1; i <= totalPages; i++) {
-      buttons.push(
-        <Button
-          key={i}
-          label={i.toString()}
-          variant={i === currentPage ? 'secondary' : 'primary'}
-          onClick={() => handleClick(i)}
-        />
-      );
+    const pages = [];
+    for (let page = startPage; page <= endPage; page++) {
+      pages.push(page);
     }
 
-    return buttons;
+    return pages;
+  };
+
+  const renderButtons = () => {
+    const pages = getPageNumbers();
+
+    return pages.map((page) => (
+      <Button
+        key={page}
+        label={page.toString()}
+        variant={page === currentPage ? 'secondary' : 'primary'}
+        onClick={() => handleClick(page)}
+      />
+    ));
   };
 
   return <div className="pagination-overlay">{renderButtons()}</div>;
