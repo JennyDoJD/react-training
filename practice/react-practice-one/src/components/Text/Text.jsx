@@ -2,19 +2,26 @@
 import PropTypes from 'prop-types';
 
 /* Import constants */
-import { COMPONENT_SIZES, TEXT_VARIANTS } from '../../constants';
+import {
+  COMPONENT_SIZES,
+  COMPONENT_TEXTS,
+  TEXT_VARIANTS,
+} from '../../constants';
 
 /* Import CSS */
 import './text.css';
 
 const Text = ({
-  variant = TEXT_VARIANTS.DEFAULT,
+  variant = TEXT_VARIANTS.PRIMARY,
   size = COMPONENT_SIZES.DEFAULT,
+  type = COMPONENT_TEXTS.DEFAULT,
   className = '',
   children,
 }) => {
   return (
-    <p className={`text-${variant} text-${variant}-${size} ${className}`}>
+    <p
+      className={`text-${variant} text-${type}-${size} text-${type} ${className}`}
+    >
       {children}
     </p>
   );
@@ -23,6 +30,7 @@ const Text = ({
 Text.propTypes = {
   variant: PropTypes.oneOf(Object.values(TEXT_VARIANTS)),
   size: PropTypes.oneOf(Object.values(COMPONENT_SIZES)),
+  type: PropTypes.oneOf(Object.values(COMPONENT_TEXTS)),
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
