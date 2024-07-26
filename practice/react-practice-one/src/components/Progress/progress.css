@@ -18,9 +18,10 @@
 }
 
 .visually-hidden {
-  color: var(--text-color-primary);
+  color: var(--text-color-secondary);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-semibold);
+  padding-top: 5px;
 }
 
 @keyframes spin {

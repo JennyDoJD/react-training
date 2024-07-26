@@ -4,6 +4,15 @@ export const PLACEHOLDER_TEXT = {
 };
 
 /**
+ * Define variants of button
+ */
+export const BUTTON_VARIANTS = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  CONTAINED: 'contained',
+};
+
+/**
  * Define size of component
  */
 export const COMPONENT_SIZES = {
@@ -23,4 +32,9 @@ export const TEXT_VARIANTS = {
   TITLE: 'title',
   DESC: 'desc',
   NAME: 'name',
+};
+
+/** Define the value of the progress text */
+export const PROGRESS_TEXT = {
+  default: 'Loading...',
 };
