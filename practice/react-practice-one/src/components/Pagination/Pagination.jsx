@@ -34,7 +34,7 @@ const Pagination = ({ currentPage, totalRecords, pageLimit, onPageChange }) => {
 
     return pages.map((page) => (
       <Button
-        key={page}
+        key={`page-${page}`}
         label={page.toString()}
         variant={page === currentPage ? 'secondary' : 'primary'}
         onClick={() => handleClick(page)}
