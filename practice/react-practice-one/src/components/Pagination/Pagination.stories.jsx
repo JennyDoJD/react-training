@@ -1,5 +1,4 @@
 /* Import dependencies */
-import { action } from '@storybook/addon-actions';
 import { useState } from 'react';
 
 /* Import components */
@@ -39,7 +38,7 @@ const Template = (args) => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
 
-    action('page-changed')(page);
+    args.onPageChange(page);
   };
 
   return (
