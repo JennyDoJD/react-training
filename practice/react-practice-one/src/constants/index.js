@@ -53,9 +53,9 @@ export const MESSAGES = {
 };
 
 /**
- * Define status of component
+ * Define types of Toast
  */
-export const STATUS = {
+export const TOAST_TYPES = {
   ERROR: 'error',
   SUCCESS: 'success',
 };

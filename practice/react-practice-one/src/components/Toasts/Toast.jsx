@@ -6,21 +6,21 @@ import { useEffect } from 'react';
 import './toast.css';
 
 /* Import constants */
-import { STATUS, MESSAGES } from '../../constants';
+import { TOAST_TYPES, MESSAGES } from '../../constants';
 
-const Toast = ({ message, name, duration = 3000, onClose }) => {
+const Toast = ({ message, type, duration = 3000, onClose }) => {
   useEffect(() => {
     const timer = setTimeout(onClose, duration);
 
     return () => clearTimeout(timer);
   }, [duration, onClose]);
 
-  return <div className={`toast ${name}`}>{message}</div>;
+  return <div className={`toast ${type}`}>{message}</div>;
 };
 
 Toast.propTypes = {
   message: PropTypes.oneOf(Object.values(MESSAGES)),
-  name: PropTypes.oneOf(Object.values(STATUS)),
+  type: PropTypes.oneOf(Object.values(TOAST_TYPES)),
   duration: PropTypes.number,
   onClose: PropTypes.func.isRequired,
 };
