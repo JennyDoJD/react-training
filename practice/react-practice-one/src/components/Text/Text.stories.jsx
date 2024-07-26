@@ -31,7 +31,7 @@ const meta = {
         type: 'select',
       },
       options: Object.values(COMPONENT_TEXTS),
-      description: 'This value specifies the field of the Text',
+      description: 'This value specifies the type of the Text',
     },
     children: { control: 'text' },
   },
