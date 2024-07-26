@@ -9,14 +9,13 @@ import ConfirmModal from './ConfirmModal';
 
 const meta = {
   title: 'COMPONENTS/Common/ConfirmModal',
-  tags: ['autodocs'],
   argTypes: {
     title: { control: 'text' },
     isOpen: {
       control: 'boolean',
       description: 'Determine whether the modal is open or not',
     },
-    onSubmit: {
+    onConfirm: {
       description: 'Function to submit the form',
     },
     onClose: {
@@ -32,7 +31,7 @@ const Template = (args) => {
 
   const handleConfirm = () => {
     setIsOpen(true);
-    args.onSubmit();
+    args.onConfirm();
   };
 
   const handleCancel = () => {
@@ -45,7 +44,7 @@ const Template = (args) => {
       <ConfirmModal
         {...args}
         isOpen={isOpen}
-        onSubmit={handleConfirm}
+        onConfirm={handleConfirm}
         onClose={handleCancel}
       />
     </>

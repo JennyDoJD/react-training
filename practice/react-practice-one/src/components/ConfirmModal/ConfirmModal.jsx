@@ -11,7 +11,7 @@ import { MODAL_TITLES } from '../../constants';
 import Text from '../Text/Text.jsx';
 import Button from '../Buttons/Button.jsx';
 
-const ConfirmModal = ({ title, onSubmit, onClose, isOpen }) => {
+const ConfirmModal = ({ title, onConfirm, onClose, isOpen }) => {
   if (!isOpen) return null;
 
   return (
@@ -28,7 +28,7 @@ const ConfirmModal = ({ title, onSubmit, onClose, isOpen }) => {
           <Button
             variant="primary"
             label="Yes"
-            onClick={onSubmit}
+            onClick={onConfirm}
             className="btn-confirm"
           />
         </div>
@@ -41,7 +41,7 @@ ConfirmModal.propTypes = {
   label: PropTypes.string,
   title: PropTypes.oneOf(Object.values(MODAL_TITLES)).isRequired,
   onClose: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  onConfirm: PropTypes.func.isRequired,
   isOpen: PropTypes.bool,
 };
 
