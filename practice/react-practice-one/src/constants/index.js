@@ -61,7 +61,7 @@ export const TOAST_TYPES = {
 };
 
 /**
- * Define Define the value of the progress text
+ * Define the value of the progress text
  */
 export const PROGRESS_TEXT = {
   default: 'Loading...',
