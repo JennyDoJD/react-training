@@ -3,30 +3,41 @@ import PropTypes from 'prop-types';
 
 /* Import CSS */
 import './card.css';
+import '../Text/text.css';
 
 /* Import components */
 import AddIcon from '../Icons/AddIcon';
 import DeleteIcon from '../Icons/DeleteIcon';
-import EditIcon from '../Icons/DeleteIcon';
+import Text from '../Text/Text';
+import Button from '../Buttons/Button';
+import EditIcon from '../Icons/EditIcon';
+
+/* Import constants */
+import { CARD_TYPES } from '../../constants';
 
 const Card = ({
   type,
   imageSrc,
   title,
-  description,
+  description = {},
   onEditClick,
   onAddClick,
+  text,
 }) => {
   return (
-    <div className={`card ${type}`}>
-      {type === 'card-add' && (
-        <a href="/" className="card-add-product" onClick={onAddClick}>
+    <div className={`${type}`}>
+      {type === CARD_TYPES.ADD && (
+        <a
+          href="javascript:void(0)"
+          className="card card-add-product"
+          onClick={onAddClick}
+        >
           <AddIcon />
-          Add new dish
+          <Text className="text-secondary text-title-sm">{text}</Text>
         </a>
       )}
-      {type === 'card-product' && (
-        <>
+      {type === CARD_TYPES.PRODUCT && (
+        <div className="card card-product">
           <div className="card-header">
             <div className="delete-product-icon">
               <DeleteIcon />
@@ -36,27 +47,35 @@ const Card = ({
             <img src={imageSrc} alt="food-image" className="card-item" />
           </figure>
           <div className="card-text">
-            <p className="tertiary-title card-name">{title}</p>
+            <Text className="card-name text-primary text-title-xs">
+              {title}
+            </Text>
             <div className="main-desc card-desc">
-              <span>{description.price}</span>
+              <Text className="text-tertiary text-desc">
+                {description.price}
+              </Text>
               <span className="circle">&#8729;</span>
-              <span>{description.quantity}</span>
+              <Text className="text-tertiary text-desc">
+                {description.quantity}
+              </Text>
             </div>
           </div>
           <div>
-            <a href="/" className="btn btn-edit" onClick={onEditClick}>
-              <EditIcon />
-              Edit dish
-            </a>
+            <Button
+              label="Edit"
+              onClick={onEditClick}
+              variant="contained"
+              icon={<EditIcon />}
+            />
           </div>
-        </>
+        </div>
       )}
     </div>
   );
 };
 
 Card.propTypes = {
-  type: PropTypes.oneOf(['card-add', 'card-product']).isRequired,
+  type: PropTypes.oneOf(Object.values(CARD_TYPES)).isRequired,
   imageSrc: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.shape({
@@ -65,6 +84,7 @@ Card.propTypes = {
   }),
   onEditClick: PropTypes.func,
   onAddClick: PropTypes.func,
+  text: PropTypes.string.isRequired,
 };
 
 export default Card;
