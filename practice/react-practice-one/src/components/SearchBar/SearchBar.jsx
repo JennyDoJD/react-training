@@ -13,7 +13,7 @@ import './searchBar.css';
 
 const SearchBar = ({ placeholder = PLACEHOLDER_TEXT.DEFAULT }) => {
   return (
-    <div className="search-overlay input-form">
+    <div className="search-overlay">
       <SearchIcon />
       <TextField type="search" placeholder={placeholder} />
     </div>
