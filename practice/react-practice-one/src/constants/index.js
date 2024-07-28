@@ -4,13 +4,6 @@ export const PLACEHOLDER_TEXT = {
 };
 
 /**
- * Define titles of modal
- */
-export const MODAL_TITLES = {
-  DELETE: 'Are you sure you want to delete this food?',
-};
-
-/**
  * Define variants of button
  */
 export const BUTTON_VARIANTS = {
