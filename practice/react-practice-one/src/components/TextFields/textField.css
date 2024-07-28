@@ -1,0 +1,31 @@
+.input-overlay {
+  position: relative;
+}
+
+.input-content {
+  flex: 1;
+  outline: none;
+  background-color: var(--background-color-tertiary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-lg);
+  color: var(--text-color-brown);
+  border-radius: var(--border-radius-primary);
+  border: 1px solid var(--border-color-tertiary);
+  padding: 14px;
+  width: 445px;
+}
+
+.input-error {
+  border: 1px solid var(--text-color-red);
+}
+
+.error-message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 382px;
+  color: var(--text-color-red);
+  font-size: var(--font-size-xs);
+  padding-top: 5px;
+}
