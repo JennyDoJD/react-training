@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import './toast.css';
 
 /* Import constants */
-import { TOAST_TYPES, MESSAGES } from '../../constants';
+import { TOAST_TYPES } from '../../constants';
 
 const Toast = ({ message, type, duration = 3000, onClose }) => {
   useEffect(() => {
@@ -19,7 +19,7 @@ const Toast = ({ message, type, duration = 3000, onClose }) => {
 };
 
 Toast.propTypes = {
-  message: PropTypes.oneOf(Object.values(MESSAGES)),
+  message: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.values(TOAST_TYPES)),
   duration: PropTypes.number,
   onClose: PropTypes.func.isRequired,
