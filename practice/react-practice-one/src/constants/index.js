@@ -34,9 +34,9 @@ export const TEXT_VARIANTS = {
 };
 
 /**
- * Define text of component
+ * Define label of component
  */
-export const COMPONENT_TEXTS = {
+export const LABELS = {
   TITLE: 'title',
   DESC: 'desc',
   NAME: 'name',

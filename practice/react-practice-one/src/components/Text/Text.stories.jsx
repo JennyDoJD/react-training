@@ -2,11 +2,7 @@
 import Text from './Text';
 
 /* Import constants */
-import {
-  COMPONENT_SIZES,
-  COMPONENT_TEXTS,
-  TEXT_VARIANTS,
-} from '../../constants';
+import { COMPONENT_SIZES, LABELS, TEXT_VARIANTS } from '../../constants';
 
 const meta = {
   title: 'COMPONENTS/Common/Text',
@@ -30,7 +26,7 @@ const meta = {
       control: {
         type: 'select',
       },
-      options: Object.values(COMPONENT_TEXTS),
+      options: Object.values(LABELS),
       description: 'This value specifies the type of the Text',
     },
     children: { control: 'text' },
@@ -44,5 +40,5 @@ Default.args = {
   children: 'Foods Management',
   variant: TEXT_VARIANTS.SECONDARY,
   size: COMPONENT_SIZES.SMALL,
-  type: COMPONENT_TEXTS.TITLE,
+  type: LABELS.TITLE,
 };
