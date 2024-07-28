@@ -1,6 +1,10 @@
+/* Import dependencies */
 import PropTypes from 'prop-types';
+
+/* Import CSS */
 import './card.css';
 
+/* Import components */
 import AddIcon from '../Icons/AddIcon';
 import DeleteIcon from '../Icons/DeleteIcon';
 import EditIcon from '../Icons/DeleteIcon';
