@@ -1,9 +1,6 @@
 /* Import dependencies */
 import { useState } from 'react';
 
-/* Import constants */
-import { MODAL_TITLES } from '../../constants';
-
 /* Import components */
 import ConfirmModal from './ConfirmModal';
 
@@ -53,6 +50,6 @@ const Template = (args) => {
 
 export const Default = (args) => <Template {...args} />;
 Default.args = {
-  title: MODAL_TITLES.DELETE,
+  title: 'Are you sure you want to delete this food?',
   isOpen: true,
 };

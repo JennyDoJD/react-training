@@ -4,9 +4,6 @@ import PropTypes from 'prop-types';
 /* Import CSS */
 import './confirmModal.css';
 
-/* Import constants */
-import { MODAL_TITLES } from '../../constants';
-
 /* Import components */
 import Text from '../Text/Text.jsx';
 import Button from '../Buttons/Button.jsx';
@@ -39,7 +36,7 @@ const ConfirmModal = ({ title, onConfirm, onClose, isOpen }) => {
 
 ConfirmModal.propTypes = {
   label: PropTypes.string,
-  title: PropTypes.oneOf(Object.values(MODAL_TITLES)).isRequired,
+  title: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   onConfirm: PropTypes.func.isRequired,
   isOpen: PropTypes.bool,
