@@ -15,6 +15,15 @@ import LogoutIcon from '../Icons/LogoutIcon';
 import './sideBar.css';
 
 const SideBar = ({ onClick, activeItem, setActiveItem }) => {
+  const menuItems = [
+    { name: 'home', icon: HomeIcon },
+    { name: 'dashboard', icon: DashboardIcon },
+    { name: 'discount', icon: DiscountIcon },
+    { name: 'message', icon: MessageIcon },
+    { name: 'notification', icon: NotificationIcon },
+    { name: 'setting', icon: SettingIcon },
+  ];
+
   const handleClick = (item) => {
     setActiveItem(item);
 
@@ -30,70 +39,20 @@ const SideBar = ({ onClick, activeItem, setActiveItem }) => {
       </div>
       <div className="sidebar-body">
         <ul className="nav-list">
-          <li className={`nav-item ${activeItem === 'home' ? 'active' : ''}`}>
-            <a
-              href="javascript:void(0)"
-              className="nav-link"
-              onClick={() => handleClick('home')}
+          {menuItems.map(({ name, icon: Icon }) => (
+            <li
+              key={name}
+              className={`nav-item ${activeItem === name ? 'active' : ''}`}
             >
-              <HomeIcon />
-            </a>
-          </li>
-          <li
-            className={`nav-item ${activeItem === 'dashboard' ? 'active' : ''}`}
-          >
-            <a
-              href="javascript:void(0)"
-              className="nav-link"
-              onClick={() => handleClick('dashboard')}
-            >
-              <DashboardIcon />
-            </a>
-          </li>
-          <li
-            className={`nav-item ${activeItem === 'discount' ? 'active' : ''}`}
-          >
-            <a
-              href="javascript:void(0)"
-              className="nav-link"
-              onClick={() => handleClick('discount')}
-            >
-              <DiscountIcon />
-            </a>
-          </li>
-          <li
-            className={`nav-item ${activeItem === 'message' ? 'active' : ''}`}
-          >
-            <a
-              href="javascript:void(0)"
-              className="nav-link"
-              onClick={() => handleClick('message')}
-            >
-              <MessageIcon />
-            </a>
-          </li>
-          <li
-            className={`nav-item ${activeItem === 'notification' ? 'active' : ''}`}
-          >
-            <a
-              href="javascript:void(0)"
-              className="nav-link"
-              onClick={() => handleClick('notification')}
-            >
-              <NotificationIcon />
-            </a>
-          </li>
-          <li
-            className={`nav-item ${activeItem === 'setting' ? 'active' : ''}`}
-          >
-            <a
-              href="javascript:void(0)"
-              className="nav-link"
-              onClick={() => handleClick('setting')}
-            >
-              <SettingIcon />
-            </a>
-          </li>
+              <a
+                href="javascript:void(0)"
+                className="nav-link"
+                onClick={() => handleClick(name)}
+              >
+                <Icon />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="sidebar-footer">
