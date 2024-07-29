@@ -34,6 +34,7 @@ const ProductForm = ({
         [field]: '',
       }));
     }
+
     onBlur && onBlur(field);
   };
 
