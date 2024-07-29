@@ -12,7 +12,7 @@ import './card.css';
 import '../Text/text.css';
 
 const meta = {
-  title: 'COMPONENTS/Common/Card',
+  title: 'COMPONENTS/Common/Cards',
   tags: ['autodocs'],
   argTypes: {
     type: {

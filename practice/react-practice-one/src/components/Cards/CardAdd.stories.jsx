@@ -8,7 +8,7 @@ import { CARD_TYPES } from '../../constants';
 import Card from './Card';
 
 const meta = {
-  title: 'COMPONENTS/Common/Card',
+  title: 'COMPONENTS/Common/Cards',
   tags: ['autodocs'],
   argTypes: {
     type: {
