@@ -19,7 +19,6 @@ const ProductForm = ({
   formData,
   errors,
   headingPage,
-  id,
 }) => {
   const [formErrors, setFormErrors] = useState(errors);
 
@@ -46,12 +45,13 @@ const ProductForm = ({
           {headingPage}
         </Text>
 
-        <form className="form-control" id={id}>
+        <form className="form-control">
           <div className="form-group">
             <Text variant="primary" className="text-title-xs">
               Name
             </Text>
             <TextField
+              id="name"
               type="text"
               value={formData.name}
               onChange={onChange}
@@ -65,6 +65,7 @@ const ProductForm = ({
               Price
             </Text>
             <TextField
+              id="price"
               type="number"
               value={formData.price}
               onChange={onChange}
@@ -78,6 +79,7 @@ const ProductForm = ({
               Image URL
             </Text>
             <TextField
+              id="imageUrl"
               type="text"
               value={formData.imageUrl}
               onChange={onChange}
@@ -91,6 +93,7 @@ const ProductForm = ({
               Quantity
             </Text>
             <TextField
+              id="quantity"
               type="number"
               value={formData.quantity}
               onChange={onChange}
@@ -121,7 +124,6 @@ const ProductForm = ({
 };
 
 ProductForm.propTypes = {
-  id: PropTypes.string.isRequired,
   headingPage: PropTypes.string.isRequired,
   onConfirm: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
