@@ -11,7 +11,6 @@ export const BUTTON_VARIANTS = {
  * Define size of component
  */
 export const COMPONENT_SIZES = {
-  DEFAULT: 'default',
   SMALL: 'sm',
   MEDIUM: 'md',
   LARGE: 'lg',
@@ -20,10 +19,19 @@ export const COMPONENT_SIZES = {
 };
 
 /**
- * Define variants of Text
+ * Define variant of Text
  */
 export const TEXT_VARIANTS = {
-  DEFAULT: 'default',
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  TERTIARY: 'tertiary',
+  DANGER: 'danger',
+};
+
+/**
+ * Define label of component
+ */
+export const LABELS = {
   TITLE: 'title',
   DESC: 'desc',
   NAME: 'name',
