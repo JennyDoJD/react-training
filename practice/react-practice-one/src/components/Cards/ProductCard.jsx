@@ -34,7 +34,9 @@ const ProductCard = ({
           onClick={onAddClick}
         >
           <AddIcon />
-          <Text className="text-secondary text-title-sm">{text}</Text>
+          <Text variant="secondary" className="text-title-sm">
+            {text}
+          </Text>
         </a>
       )}
       {type === CARD_TYPES.PRODUCT && (
@@ -48,15 +50,15 @@ const ProductCard = ({
             <img src={imageSrc} alt="food-image" className="card-item" />
           </figure>
           <div className="card-text">
-            <Text className="card-name text-primary text-title-xs">
+            <Text variant="primary" className="card-name  text-title-xs">
               {title}
             </Text>
             <div className="main-desc card-desc">
-              <Text className="text-tertiary text-desc">
+              <Text variant="tertiary" className=" text-desc">
                 {description.price}
               </Text>
               <span className="circle">&#8729;</span>
-              <Text className="text-tertiary text-desc">
+              <Text variant="tertiary" className="text-tertiary text-desc">
                 {description.quantity}
               </Text>
             </div>
