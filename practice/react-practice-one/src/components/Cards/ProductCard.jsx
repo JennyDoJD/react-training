@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 /* Import CSS */
-import './card.css';
+import './productCard.css';
 import '../Text/text.css';
 
 /* Import components */
@@ -15,7 +15,7 @@ import EditIcon from '../Icons/EditIcon';
 /* Import constants */
 import { CARD_TYPES } from '../../constants';
 
-const Card = ({
+const ProductCard = ({
   type,
   imageSrc,
   title,
@@ -74,7 +74,7 @@ const Card = ({
   );
 };
 
-Card.propTypes = {
+ProductCard.propTypes = {
   type: PropTypes.oneOf(Object.values(CARD_TYPES)).isRequired,
   imageSrc: PropTypes.string,
   title: PropTypes.string,
@@ -87,4 +87,4 @@ Card.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-export default Card;
+export default ProductCard;

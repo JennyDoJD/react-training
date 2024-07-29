@@ -5,10 +5,10 @@ import { action } from '@storybook/addon-actions';
 import { CARD_TYPES } from '../../constants';
 
 /* Import components */
-import Card from './Card';
+import ProductCard from './ProductCard';
 
 /* Import CSS */
-import './card.css';
+import './productCard.css';
 import '../Text/text.css';
 
 const meta = {
@@ -40,7 +40,7 @@ const meta = {
 
 export default meta;
 
-export const CardProduct = (args) => <Card {...args} />;
+export const CardProduct = (args) => <ProductCard {...args} />;
 CardProduct.args = {
   type: CARD_TYPES.PRODUCT,
   imageSrc:

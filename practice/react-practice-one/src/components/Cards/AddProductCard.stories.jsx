@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { CARD_TYPES } from '../../constants';
 
 /* Import components */
-import Card from './Card';
+import ProductCard from './ProductCard';
 
 const meta = {
   title: 'COMPONENTS/Common/Cards',
@@ -24,8 +24,8 @@ const meta = {
 
 export default meta;
 
-export const CardAdd = (args) => <Card {...args} />;
-CardAdd.args = {
+export const CardAddProduct = (args) => <ProductCard {...args} />;
+CardAddProduct.args = {
   type: CARD_TYPES.ADD,
   text: 'Add New Dish',
   onAddClick: action('add-clicked'),
