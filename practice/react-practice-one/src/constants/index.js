@@ -23,13 +23,21 @@ export const COMPONENT_SIZES = {
  * Define variants of Text
  */
 export const TEXT_VARIANTS = {
-  DEFAULT: 'default',
-  TITLE: 'title',
-  DESC: 'desc',
-  NAME: 'name',
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  TERTIARY: 'tertiary',
+  DANGER: 'danger',
 };
 
 /** Define the value of the progress text */
 export const PROGRESS_TEXT = {
   default: 'Loading...',
+};
+
+/**
+ * Define variants of Text
+ */
+export const LABELS = {
+  ADD: 'add',
+  PRODUCT: 'product',
 };
