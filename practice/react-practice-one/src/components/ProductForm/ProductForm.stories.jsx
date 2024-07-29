@@ -84,7 +84,8 @@ Default.args = {
   formData: {
     name: 'Pizza',
     price: '23',
-    imageUrl: '250',
+    imageUrl:
+      'https://th.bing.com/th/id/OIP.XzUnt5Afjbz_9Bmkng2IMQHaEK?rs=1&pid=ImgDetMain.png',
     quantity: '22',
   },
   errors: {
