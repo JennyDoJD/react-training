@@ -4,7 +4,15 @@ import PropTypes from 'prop-types';
 /* Import CSS */
 import './textField.css';
 
-const TextField = ({ id, type, value, onBlur, onChange, errorMessage }) => {
+const TextField = ({
+  id,
+  type,
+  value,
+  onBlur,
+  onChange,
+  errorMessage,
+  placeholder = '',
+}) => {
   return (
     <div className="input-overlay">
       <input
@@ -14,6 +22,7 @@ const TextField = ({ id, type, value, onBlur, onChange, errorMessage }) => {
         value={value}
         onBlur={onBlur}
         onChange={onChange}
+        placeholder={placeholder}
       />
       {errorMessage && <span className="error-message">{errorMessage}</span>}
     </div>
@@ -27,6 +36,7 @@ TextField.propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   errorMessage: PropTypes.string,
+  placeholder: PropTypes.string.isRequired,
 };
 
 export default TextField;
