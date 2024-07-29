@@ -1,19 +1,13 @@
 .search-overlay {
   display: flex;
   align-items: center;
-  gap: 8px;
   border-radius: var(--border-radius-primary);
-  width: 342px;
+  background-color: var(--background-color-tertiary);
+  padding-left: 14px;
+  width: fit-content;
 }
 
-.input-form {
-  border: 1px solid var(--border-color-tertiary);
-  border-radius: var(--border-radius-primary);
-  padding: 14px;
-  background-color: var(--background-color-tertiary);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-lg);
-  color: var(--text-color-brown);
-  outline: none;
+.search-overlay .input-content {
+  border: none;
+  width: 342px;
 }
