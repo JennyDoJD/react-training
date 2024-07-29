@@ -33,3 +33,11 @@ export const TEXT_VARIANTS = {
 export const PROGRESS_TEXT = {
   default: 'Loading...',
 };
+
+/**
+ * Define the types of the card
+ */
+export const CARD_TYPES = {
+  ADD: 'add',
+  PRODUCT: 'product',
+};
