@@ -22,6 +22,7 @@ const ProductCard = ({
   description = {},
   onEditClick,
   onAddClick,
+  onDeleteClick,
   text,
 }) => {
   return (
@@ -39,7 +40,7 @@ const ProductCard = ({
       {type === CARD_TYPES.PRODUCT && (
         <div className="card card-product">
           <div className="card-header">
-            <div className="delete-product-icon">
+            <div className="delete-product-icon" onClick={onDeleteClick}>
               <DeleteIcon />
             </div>
           </div>
@@ -84,6 +85,7 @@ ProductCard.propTypes = {
   }),
   onEditClick: PropTypes.func,
   onAddClick: PropTypes.func,
+  onDeleteClick: PropTypes.func,
   text: PropTypes.string.isRequired,
 };
 

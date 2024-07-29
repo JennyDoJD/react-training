@@ -35,6 +35,10 @@ const meta = {
       action: 'edit-clicked',
       description: 'Callback function for edit button click',
     },
+    onDeleteClick: {
+      action: 'delete-clicked',
+      description: 'Callback function for delete icon click',
+    },
   },
 };
 
@@ -51,4 +55,5 @@ CardProduct.args = {
     quantity: '20 Bowls',
   },
   onEditClick: action('edit-clicked'),
+  onDeleteClick: action('delete-clicked'),
 };
