@@ -19,7 +19,6 @@ const ProductForm = ({
   formData,
   errors,
   headingPage,
-  className = '',
 }) => {
   const [formErrors, setFormErrors] = useState(errors);
 
@@ -124,7 +123,6 @@ const ProductForm = ({
 };
 
 ProductForm.propTypes = {
-  className: PropTypes.string,
   headingPage: PropTypes.string.isRequired,
   onConfirm: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
