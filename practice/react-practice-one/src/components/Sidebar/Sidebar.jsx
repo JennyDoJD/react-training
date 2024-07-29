@@ -27,7 +27,9 @@ const SideBar = ({ onClick, activeItem, setActiveItem }) => {
   const handleClick = (item) => {
     setActiveItem(item);
 
-    if (onClick) onClick(item);
+    if (onClick) {
+      onClick(item);
+    }
   };
 
   return (
@@ -44,11 +46,7 @@ const SideBar = ({ onClick, activeItem, setActiveItem }) => {
               key={name}
               className={`nav-item ${activeItem === name ? 'active' : ''}`}
             >
-              <a
-                href="javascript:void(0)"
-                className="nav-link"
-                onClick={() => handleClick(name)}
-              >
+              <a className="nav-link" onClick={() => handleClick(name)}>
                 <Icon />
               </a>
             </li>
