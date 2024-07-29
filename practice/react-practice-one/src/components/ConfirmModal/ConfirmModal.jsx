@@ -14,7 +14,9 @@ const ConfirmModal = ({ title, onConfirm, onClose, isOpen }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <Text className="modal-title">{title}</Text>
+        <Text variant="primary" className="modal-title text-title-xl">
+          {title}
+        </Text>
         <div className="modal-actions">
           <Button
             variant="secondary"
