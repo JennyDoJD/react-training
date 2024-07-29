@@ -19,6 +19,7 @@ const ProductForm = ({
   formData,
   errors,
   headingPage,
+  className = '',
 }) => {
   const [formErrors, setFormErrors] = useState(errors);
 
@@ -87,7 +88,7 @@ const ProductForm = ({
             />
           </div>
 
-          <div className="form-group form-field-quantity">
+          <div className="form-group">
             <Text variant="primary" className="text-title-xs">
               Quantity
             </Text>
@@ -98,6 +99,7 @@ const ProductForm = ({
               onChange={onChange}
               errorMessage={formErrors.quantity}
               onBlur={() => handleBlur('quantity')}
+              className="input-short"
             />
           </div>
 
@@ -122,6 +124,7 @@ const ProductForm = ({
 };
 
 ProductForm.propTypes = {
+  className: PropTypes.string,
   headingPage: PropTypes.string.isRequired,
   onConfirm: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
