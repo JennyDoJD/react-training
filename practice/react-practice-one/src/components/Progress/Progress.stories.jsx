@@ -19,5 +19,5 @@ export default meta;
 
 export const Default = (args) => <Progress {...args} />;
 Default.args = {
-  text: PROGRESS_TEXT.default,
+  text: PROGRESS_TEXT.DEFAULT,
 };
