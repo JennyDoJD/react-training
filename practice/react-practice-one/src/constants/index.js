@@ -69,11 +69,3 @@ export const TOAST_TYPES = {
 export const PROGRESS_TEXT = {
   DEFAULT: 'Loading...',
 };
-
-/**
- * Define variants of Text
- */
-export const CARD_TYPES = {
-  ADD: 'add',
-  PRODUCT: 'product',
-};
