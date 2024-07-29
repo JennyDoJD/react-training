@@ -1,8 +1,3 @@
-/** Define value for placeholder */
-export const PLACEHOLDER_TEXT = {
-  DEFAULT: 'Search for food, coffee, etc..',
-};
-
 /**
  * Define variants of button
  */
