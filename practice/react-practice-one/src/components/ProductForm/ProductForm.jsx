@@ -11,8 +11,8 @@ import './productForm.css';
 import '../Text/text.css';
 
 const ProductForm = ({
-  onSave,
-  onCancel,
+  onConfirm,
+  onClose,
   onChange,
   formData,
   errors,
@@ -82,13 +82,13 @@ const ProductForm = ({
             <Button
               variant="primary"
               label="Cancel"
-              onClick={onCancel}
+              onClick={onClose}
               className="btn-confirm"
             />
             <Button
               variant="secondary"
               label="Save"
-              onClick={onSave}
+              onClick={onConfirm}
               className="btn-confirm"
             />
           </div>
@@ -100,8 +100,8 @@ const ProductForm = ({
 
 ProductForm.propTypes = {
   headingPage: PropTypes.string.isRequired,
-  onSave: PropTypes.func.isRequired,
-  onCancel: PropTypes.func.isRequired,
+  onConfirm: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   formData: PropTypes.shape({
     name: PropTypes.string,

@@ -8,11 +8,11 @@ const meta = {
   title: 'COMPONENTS/Common/ProductForm',
   tags: ['autodocs'],
   argTypes: {
-    onSave: {
+    onConfirm: {
       action: 'save-clicked',
       description: 'Function will be called when the save button is clicked',
     },
-    onCancel: {
+    onClose: {
       action: 'cancel-clicked',
       description: 'Function will be called when the cancel button is clicked',
     },
@@ -39,8 +39,8 @@ export default meta;
 export const Default = (args) => <ProductForm {...args} />;
 Default.args = {
   headingPage: 'Create a new product',
-  onSave: action('save-clicked'),
-  onCancel: action('cancel-clicked'),
+  onConfirm: action('save-clicked'),
+  onClose: action('cancel-clicked'),
   onChange: action('change'),
   formData: {
     name: '',
@@ -59,8 +59,8 @@ Default.args = {
 export const FormWithErrors = (args) => <ProductForm {...args} />;
 FormWithErrors.args = {
   headingPage: 'Create a new product',
-  onSave: action('save-clicked'),
-  onCancel: action('cancel-clicked'),
+  onConfirm: action('save-clicked'),
+  onClose: action('cancel-clicked'),
   onChange: action('change'),
   formData: {
     name: '',
