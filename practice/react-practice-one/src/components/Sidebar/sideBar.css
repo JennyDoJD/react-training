@@ -2,6 +2,8 @@
   position: absolute;
   background-color: var(--background-color-primary);
   padding-left: 12px;
+  border-radius: var(--border-radius-secondary);
+  min-height: 100vh;
 }
 
 .sidebar-header {
