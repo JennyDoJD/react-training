@@ -12,11 +12,12 @@ const TextField = ({
   onChange,
   errorMessage,
   placeholder = '',
+  className = '',
 }) => {
   return (
     <div className="input-overlay">
       <input
-        className={`input-content ${errorMessage ? 'input-error' : ''}`}
+        className={`input-content ${errorMessage ? 'input-error' : ''} ${className}`}
         type={type}
         id={id}
         value={value}
@@ -37,6 +38,7 @@ TextField.propTypes = {
   onChange: PropTypes.func,
   errorMessage: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 export default TextField;
