@@ -7,7 +7,7 @@ import { PROGRESS_TEXT } from '../../constants';
 /* Import CSS */
 import './progress.css';
 
-const Progress = ({ text = PROGRESS_TEXT.default }) => {
+const Progress = ({ text = PROGRESS_TEXT.DEFAULT }) => {
   return (
     <div className="progress">
       <div className="progress-loading"></div>
