@@ -1,5 +1,6 @@
 /* Import dependencies */
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 /* Import components */
 import Text from '../Text/Text';
@@ -14,10 +15,28 @@ const ProductForm = ({
   onConfirm,
   onClose,
   onChange,
+  onBlur,
   formData,
   errors,
   headingPage,
 }) => {
+  const [formErrors, setFormErrors] = useState(errors);
+
+  const handleBlur = (field) => {
+    if (!formData[field]) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        [field]: 'This field is required.',
+      }));
+    } else {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        [field]: '',
+      }));
+    }
+    onBlur && onBlur(field);
+  };
+
   return (
     <div className="form-overlay">
       <div className="form-container">
@@ -35,7 +54,8 @@ const ProductForm = ({
               type="text"
               value={formData.name}
               onChange={onChange}
-              errorMessage={errors.name}
+              errorMessage={formErrors.name}
+              onBlur={() => handleBlur('name')}
             />
           </div>
 
@@ -48,7 +68,8 @@ const ProductForm = ({
               type="number"
               value={formData.price}
               onChange={onChange}
-              errorMessage={errors.price}
+              errorMessage={formErrors.price}
+              onBlur={() => handleBlur('price')}
             />
           </div>
 
@@ -61,7 +82,8 @@ const ProductForm = ({
               type="text"
               value={formData.imageUrl}
               onChange={onChange}
-              errorMessage={errors.imageUrl}
+              errorMessage={formErrors.imageUrl}
+              onBlur={() => handleBlur('imageUrl')}
             />
           </div>
 
@@ -74,7 +96,8 @@ const ProductForm = ({
               type="number"
               value={formData.quantity}
               onChange={onChange}
-              errorMessage={errors.quantity}
+              errorMessage={formErrors.quantity}
+              onBlur={() => handleBlur('quantity')}
             />
           </div>
 
@@ -103,6 +126,7 @@ ProductForm.propTypes = {
   onConfirm: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
+  onBlur: PropTypes.func,
   formData: PropTypes.shape({
     name: PropTypes.string,
     price: PropTypes.string,

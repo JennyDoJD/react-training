@@ -1,4 +1,5 @@
 /* Import dependencies */
+import { useState } from 'react';
 import { action } from '@storybook/addon-actions';
 
 /* Import components */
@@ -36,42 +37,60 @@ const meta = {
 
 export default meta;
 
-export const Default = (args) => <ProductForm {...args} />;
+const Template = (args) => {
+  const [formData, setFormData] = useState(args.formData);
+  const [errors, setErrors] = useState(args.errors);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+    args.onChange(e);
+  };
+
+  const handleBlur = (field) => {
+    if (!formData[field]) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [field]: 'This field is required.',
+      }));
+    } else {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [field]: '',
+      }));
+    }
+  };
+
+  return (
+    <ProductForm
+      {...args}
+      formData={formData}
+      errors={errors}
+      onChange={handleChange}
+      onBlur={handleBlur}
+    />
+  );
+};
+
+export const Default = (args) => <Template {...args} />;
 Default.args = {
   headingPage: 'Create a new product',
   onConfirm: action('save-clicked'),
   onClose: action('cancel-clicked'),
   onChange: action('change'),
   formData: {
-    name: '',
-    price: '',
-    imageUrl: '',
-    quantity: '',
+    name: 'Pizza',
+    price: '23',
+    imageUrl: '250',
+    quantity: '22',
   },
   errors: {
     name: '',
     price: '',
     imageUrl: '',
     quantity: '',
-  },
-};
-
-export const FormWithErrors = (args) => <ProductForm {...args} />;
-FormWithErrors.args = {
-  headingPage: 'Create a new product',
-  onConfirm: action('save-clicked'),
-  onClose: action('cancel-clicked'),
-  onChange: action('change'),
-  formData: {
-    name: '',
-    price: '',
-    imageUrl: '',
-    quantity: '',
-  },
-  errors: {
-    name: 'Name is required',
-    price: 'Price must be a number',
-    imageUrl: 'Image URL is required',
-    quantity: 'Quantity must be a number',
   },
 };
