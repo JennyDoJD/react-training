@@ -73,7 +73,7 @@ export const PROGRESS_TEXT = {
 /**
  * Define variants of Text
  */
-export const CARD_LABELS = {
+export const CARD_TYPES = {
   ADD: 'add',
   PRODUCT: 'product',
 };
