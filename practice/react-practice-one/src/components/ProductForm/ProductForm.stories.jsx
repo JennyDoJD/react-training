@@ -82,6 +82,7 @@ Default.args = {
   onClose: action('cancel-clicked'),
   onChange: action('change'),
   formData: {
+    id: '1',
     name: 'Pizza',
     price: '23',
     imageUrl:
@@ -89,6 +90,7 @@ Default.args = {
     quantity: '22',
   },
   errors: {
+    id: '',
     name: '',
     price: '',
     imageUrl: '',
