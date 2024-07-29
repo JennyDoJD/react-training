@@ -40,13 +40,13 @@ const ProductForm = ({
   return (
     <div className="form-overlay">
       <div className="form-container">
-        <Text variant="title" className="text-title-default form-heading ">
+        <Text variant="primary" className="text-title-default form-heading ">
           {headingPage}
         </Text>
 
         <form className="form-control">
           <div className="form-group">
-            <Text variant="title" className="text-title-sm">
+            <Text variant="primary" className="text-title-sm">
               Name
             </Text>
             <TextField
@@ -60,7 +60,7 @@ const ProductForm = ({
           </div>
 
           <div className="form-group">
-            <Text variant="title" className="text-title-sm">
+            <Text variant="primary" className="text-title-sm">
               Price
             </Text>
             <TextField
@@ -74,7 +74,7 @@ const ProductForm = ({
           </div>
 
           <div className="form-group">
-            <Text variant="title" className="text-title-sm">
+            <Text variant="primary" className="text-title-sm">
               Image URL
             </Text>
             <TextField
@@ -88,7 +88,7 @@ const ProductForm = ({
           </div>
 
           <div className="form-group form-field-quantity">
-            <Text variant="title" className="text-title-sm">
+            <Text variant="primary" className="text-title-sm">
               Quantity
             </Text>
             <TextField
