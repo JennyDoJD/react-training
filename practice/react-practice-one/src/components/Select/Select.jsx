@@ -4,15 +4,12 @@ import PropTypes from 'prop-types';
 /* Import CSS */
 import './select.css';
 
-/* Import components */
-import SelectIcon from '../Icons/SelectIcon';
-
-const Select = ({ options, onChange }) => {
+const Select = ({ options, onChange, icon, text }) => {
   return (
     <div className="select-overlay ">
-      <SelectIcon />
+      {icon && icon}
       <select className="sort-container" onChange={onChange}>
-        <option value="default">Sort by</option>
+        <option value="default">{text}</option>
         {options.map((group) => (
           <optgroup key={group.label} label={group.label}>
             {group.items.map((item) => (
@@ -48,6 +45,8 @@ Select.propTypes = {
     })
   ).isRequired,
   onChange: PropTypes.func,
+  icon: PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default Select;

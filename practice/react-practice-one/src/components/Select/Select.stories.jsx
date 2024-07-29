@@ -1,9 +1,17 @@
 /* Import components */
 import Select from './Select';
 
+import SelectIcon from '../Icons/SelectIcon';
+
 const meta = {
   title: 'COMPONENTS/Common/Select',
   tags: ['autodocs'],
+  argTypes: {
+    text: {
+      control: { type: 'text' },
+      description: 'This value specifies the content of the Select',
+    },
+  },
 };
 
 export default meta;
@@ -51,5 +59,7 @@ const options = [
 
 export const Default = (args) => <Select {...args} />;
 Default.args = {
+  icon: <SelectIcon />,
   options: options,
+  text: 'Sort by',
 };
