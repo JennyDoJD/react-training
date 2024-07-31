@@ -9,7 +9,6 @@ import './pagination.css';
 
 const Pagination = ({ currentPage, totalRecords, pageLimit, onPageChange }) => {
   const totalPages = Math.ceil(totalRecords / pageLimit);
-  const pageRange = 5;
 
   const handleClick = (page) => {
     if (page !== currentPage) {
@@ -18,11 +17,9 @@ const Pagination = ({ currentPage, totalRecords, pageLimit, onPageChange }) => {
   };
 
   const getPageNumbers = () => {
-    const startPage = Math.max(1, currentPage - Math.floor(pageRange / 2));
-    const endPage = Math.min(totalPages, startPage + pageRange - 1);
-
     const pages = [];
-    for (let page = startPage; page <= endPage; page++) {
+
+    for (let page = 1; page <= totalPages; page++) {
       pages.push(page);
     }
 
