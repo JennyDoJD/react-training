@@ -1,0 +1,68 @@
+.card-overlay {
+  cursor: pointer;
+  background-color: var(--background-color-primary);
+  width: 221px;
+  border-radius: var(--border-radius-primary);
+}
+
+.product-card {
+  border: 1px solid var(--border-color-tertiary);
+
+  &:hover > .card-header {
+    visibility: visible;
+  }
+}
+
+.card-header {
+  float: right;
+  visibility: hidden;
+  padding-top: 10px;
+  padding-right: 11px;
+}
+
+.card-image {
+  height: 130px;
+  padding: 24px 47px 16px;
+}
+
+.card-text {
+  padding: 0 38px 16px 39px;
+  text-align: center;
+}
+
+.card-name {
+  height: 36px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.circle {
+  color: var(--background-color-gray);
+}
+
+.card-desc {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.add-product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border: 2px dashed var(--border-color-secondary);
+  padding-top: 111px;
+  padding-bottom: 110px;
+}
+
+.card-item {
+  border-radius: 50%;
+  height: 130px;
+  width: 100%;
+  object-fit: cover;
+}
