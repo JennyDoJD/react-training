@@ -34,11 +34,11 @@ const SideBar = ({ onClick, activeItem, setActiveItem }) => {
 
   return (
     <aside className="sidebar-overlay">
-      <div className="sidebar-header">
+      <h1 className="sidebar-header">
         <a className="sidebar-logo">
           <LogoIcon />
         </a>
-      </div>
+      </h1>
       <div className="sidebar-body">
         <ul className="nav-list">
           {menuItems.map(({ name, icon: Icon }) => (
