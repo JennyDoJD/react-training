@@ -54,19 +54,5 @@ export const Default = (args) => <Template {...args} />;
 Default.args = {
   totalRecords: 30,
   pageLimit: 10,
-  currentPage: 1,
-};
-
-export const MultiplePages = (args) => <Template {...args} />;
-MultiplePages.args = {
-  totalRecords: 100,
-  pageLimit: 10,
-  currentPage: 1,
-};
-
-export const LastPage = (args) => <Template {...args} />;
-LastPage.args = {
-  totalRecords: 100,
-  pageLimit: 10,
-  currentPage: 10,
+  currentPage: 2,
 };
