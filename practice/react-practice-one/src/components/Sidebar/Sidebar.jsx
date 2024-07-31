@@ -35,7 +35,7 @@ const SideBar = ({ onClick, activeItem, setActiveItem }) => {
   return (
     <aside className="sidebar-overlay">
       <div className="sidebar-header">
-        <a href="javascript:void(0)" className="sidebar-logo">
+        <a className="sidebar-logo">
           <LogoIcon />
         </a>
       </div>
@@ -54,7 +54,7 @@ const SideBar = ({ onClick, activeItem, setActiveItem }) => {
         </ul>
       </div>
       <div className="sidebar-footer">
-        <a href="javascript:void(0)" className="sidebar-footer-link">
+        <a className="sidebar-footer-link">
           <LogoutIcon />
         </a>
       </div>
