@@ -5,7 +5,7 @@
   border-radius: var(--border-radius-primary);
 }
 
-.primary-card {
+.product-card {
   border: 1px solid var(--border-color-tertiary);
 
   &:hover > .card-header {
@@ -50,7 +50,7 @@
   padding-top: 8px;
 }
 
-.secondary-card {
+.add-product-card {
   display: flex;
   flex-direction: column;
   align-items: center;

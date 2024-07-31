@@ -28,7 +28,7 @@ const ProductCard = ({
   return (
     <div className={`${type}`}>
       {type === CARD_TYPES.PRODUCT && (
-        <div className="card primary-card">
+        <div className="card product-card">
           <div className="card-header">
             <div onClick={onDeleteClick}>
               <DeleteIcon />
@@ -62,7 +62,7 @@ const ProductCard = ({
         </div>
       )}
       {type === CARD_TYPES.ADD && (
-        <a className="card secondary-card" onClick={onAddClick}>
+        <a className="card add-product-card" onClick={onAddClick}>
           <AddIcon />
           <Text variant="secondary" className="text-title-sm">
             {text}
