@@ -22,7 +22,7 @@ const Select = ({ options, onChange, icon, text }) => {
     <div className="select-overlay">
       {icon && icon}
       <select
-        className="sort-container"
+        className="select-container"
         value={selectedValue}
         onChange={handleChange}
       >
