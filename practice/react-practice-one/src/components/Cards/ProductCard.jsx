@@ -27,22 +27,10 @@ const ProductCard = ({
 }) => {
   return (
     <div className={`${type}`}>
-      {type === CARD_TYPES.ADD && (
-        <a
-          href="javascript:void(0)"
-          className="card card-add-product"
-          onClick={onAddClick}
-        >
-          <AddIcon />
-          <Text variant="secondary" className="text-title-sm">
-            {text}
-          </Text>
-        </a>
-      )}
       {type === CARD_TYPES.PRODUCT && (
-        <div className="card card-product">
+        <div className="card primary-card">
           <div className="card-header">
-            <div className="delete-product-icon" onClick={onDeleteClick}>
+            <div onClick={onDeleteClick}>
               <DeleteIcon />
             </div>
           </div>
@@ -54,7 +42,7 @@ const ProductCard = ({
               {title}
             </Text>
             <div className="main-desc card-desc">
-              <Text variant="tertiary" className=" text-desc">
+              <Text variant="tertiary" className="text-desc">
                 {description.price}
               </Text>
               <span className="circle">&#8729;</span>
@@ -72,6 +60,14 @@ const ProductCard = ({
             />
           </div>
         </div>
+      )}
+      {type === CARD_TYPES.ADD && (
+        <a className="card secondary-card" onClick={onAddClick}>
+          <AddIcon />
+          <Text variant="secondary" className="text-title-sm">
+            {text}
+          </Text>
+        </a>
       )}
     </div>
   );
