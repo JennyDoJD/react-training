@@ -24,8 +24,8 @@ const meta = {
 
 export default meta;
 
-export const CardAddProduct = (args) => <ProductCard {...args} />;
-CardAddProduct.args = {
+export const AddProductCard = (args) => <ProductCard {...args} />;
+AddProductCard.args = {
   type: CARD_TYPES.ADD,
   text: 'Add New Dish',
   onAddClick: action('add-clicked'),

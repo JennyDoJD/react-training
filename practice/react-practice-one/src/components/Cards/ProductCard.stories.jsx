@@ -44,8 +44,8 @@ const meta = {
 
 export default meta;
 
-export const CardProduct = (args) => <ProductCard {...args} />;
-CardProduct.args = {
+export const ProductCards = (args) => <ProductCard {...args} />;
+ProductCards.args = {
   type: CARD_TYPES.PRODUCT,
   imageSrc:
     'https://img.lovepik.com/free-png/20211210/lovepik-hot-noodles-with-sesame-paste-png-image_401479832_wh1200.png',
