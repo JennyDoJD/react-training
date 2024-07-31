@@ -1,0 +1,23 @@
+.select-overlay {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  border: 1px solid var(--border-color-tertiary);
+  border-radius: var(--border-radius-primary);
+  padding: 14px;
+  margin-right: auto;
+  background-color: var(--background-color-primary);
+  width: fit-content;
+}
+
+.select-container {
+  cursor: pointer;
+  border: none;
+  appearance: none;
+  outline: none;
+  background-color: var(--background-color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-md);
+  color: var(--text-color-primary);
+}
