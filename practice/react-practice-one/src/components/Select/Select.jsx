@@ -1,24 +1,36 @@
 /* Import dependencies */
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 /* Import CSS */
 import './select.css';
 
 const Select = ({ options, onChange, icon, text }) => {
+  const [selectedValue, setSelectedValue] = useState('default');
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+
+    setSelectedValue(value);
+
+    if (onChange) {
+      onChange(value);
+    }
+  };
+
   return (
     <div className="select-overlay">
       {icon && icon}
-      <select className="sort-container" onChange={onChange}>
+      <select
+        className="sort-container"
+        value={selectedValue}
+        onChange={handleChange}
+      >
         <option value="default">{text}</option>
         {options.map((group) => (
           <optgroup key={group.label} label={group.label}>
             {group.items.map((item) => (
-              <option
-                key={item.key}
-                value={item.value}
-                data-sort-by={item.sortBy}
-                data-order={item.order}
-              >
+              <option key={item.key} value={item.value}>
                 {item.label}
               </option>
             ))}
@@ -37,8 +49,6 @@ Select.propTypes = {
         PropTypes.shape({
           value: PropTypes.string.isRequired,
           label: PropTypes.string.isRequired,
-          sortBy: PropTypes.string,
-          order: PropTypes.string,
           key: PropTypes.string.isRequired,
         })
       ).isRequired,

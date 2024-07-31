@@ -1,6 +1,5 @@
 /* Import components */
 import Select from './Select';
-
 import SelectIcon from '../Icons/SelectIcon';
 
 const meta = {
@@ -23,15 +22,11 @@ const options = [
       {
         value: 'name-asc',
         label: 'A to Z',
-        sortBy: 'name',
-        order: 'asc',
         key: 'name-asc',
       },
       {
         value: 'name-desc',
         label: 'Z to A',
-        sortBy: 'name',
-        order: 'desc',
         key: 'name-desc',
       },
     ],
@@ -42,15 +37,11 @@ const options = [
       {
         value: 'price-asc',
         label: 'Low to high',
-        sortBy: 'price',
-        order: 'asc',
         key: 'price-asc',
       },
       {
         value: 'price-desc',
         label: 'High to low',
-        sortBy: 'price',
-        order: 'desc',
         key: 'price-desc',
       },
     ],
