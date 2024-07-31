@@ -6,7 +6,7 @@ import './select.css';
 
 const Select = ({ options, onChange, icon, text }) => {
   return (
-    <div className="select-overlay ">
+    <div className="select-overlay">
       {icon && icon}
       <select className="sort-container" onChange={onChange}>
         <option value="default">{text}</option>
@@ -45,7 +45,7 @@ Select.propTypes = {
     })
   ).isRequired,
   onChange: PropTypes.func,
-  icon: PropTypes.string,
+  icon: PropTypes.node,
   text: PropTypes.string,
 };
 
