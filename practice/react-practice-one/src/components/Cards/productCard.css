@@ -1,4 +1,4 @@
-.card {
+.card-overlay {
   cursor: pointer;
   background-color: var(--background-color-primary);
   width: 221px;
