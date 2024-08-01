@@ -26,9 +26,7 @@ const Pagination = ({
     const ellipsis = '...';
 
     if (totalPages <= 5) {
-      for (let page = 1; page <= totalPages; page++) {
-        pages.push(page);
-      }
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
     }
 
     const leftBound = Math.max(1, currentPage - 1);
