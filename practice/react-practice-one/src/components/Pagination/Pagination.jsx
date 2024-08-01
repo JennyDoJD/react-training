@@ -22,7 +22,6 @@ const Pagination = ({
   };
 
   const getPageNumbers = () => {
-    const pages = [];
     const ellipsis = '...';
 
     // If total number of pages is less than or equal to 5, return all page numbers.
@@ -30,42 +29,36 @@ const Pagination = ({
       return Array.from({ length: totalPages }, (_, i) => i + 1);
     }
 
-    const leftBound = Math.max(1, currentPage - 1);
-    const rightBound = Math.min(totalPages, currentPage + 1);
-
     // If currentPage is less than or equal to 3, return the first page number.
     if (currentPage <= 3) {
-      pages.push(1, 2, 3, 4, ellipsis, totalPages);
+      return [1, 2, 3, 4, ellipsis, totalPages];
+    }
 
-      return pages;
-
-      // If currentPage is near the end, return the last page number.
-    } else if (currentPage >= totalPages - 2) {
-      pages.push(
+    // If currentPage is near the end, return the last page number.
+    if (currentPage >= totalPages - 2) {
+      return [
         1,
         ellipsis,
         totalPages - 3,
         totalPages - 2,
         totalPages - 1,
-        totalPages
-      );
-
-      return pages;
-
-      // If none of the above cases apply, calculate the middle pages.
-    } else {
-      pages.push(
-        1,
-        ellipsis,
-        leftBound,
-        currentPage,
-        rightBound,
-        ellipsis,
-        totalPages
-      );
-
-      return pages;
+        totalPages,
+      ];
     }
+
+    // If none of the above cases apply, calculate the middle pages.
+    const leftBound = Math.max(1, currentPage - 1);
+    const rightBound = Math.min(totalPages, currentPage + 1);
+
+    return [
+      1,
+      ellipsis,
+      leftBound,
+      currentPage,
+      rightBound,
+      ellipsis,
+      totalPages,
+    ];
   };
 
   const renderButtons = () => {
