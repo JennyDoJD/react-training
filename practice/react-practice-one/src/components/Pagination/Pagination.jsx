@@ -7,7 +7,12 @@ import Button from '../Buttons/Button';
 /* Import CSS */
 import './pagination.css';
 
-const Pagination = ({ currentPage, totalRecords, pageLimit, onPageChange }) => {
+const Pagination = ({
+  currentPage = 1,
+  totalRecords = 0,
+  pageLimit = 10,
+  onPageChange,
+}) => {
   const totalPages = Math.ceil(totalRecords / pageLimit);
 
   const handleClick = (page) => {
@@ -26,7 +31,7 @@ const Pagination = ({ currentPage, totalRecords, pageLimit, onPageChange }) => {
       }
     } else {
       if (currentPage <= 3) {
-        pages.push(1, 2, 3, 4, ellipsis, totalPages);
+        pages.push(1, 2, 3, 4, 5, ellipsis, totalPages);
       } else if (currentPage >= totalPages - 2) {
         pages.push(
           1,
