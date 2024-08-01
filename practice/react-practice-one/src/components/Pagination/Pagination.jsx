@@ -55,38 +55,36 @@ const Pagination = ({ currentPage, totalRecords, pageLimit, onPageChange }) => {
   const renderButtons = () => {
     const pages = getPageNumbers();
 
-    return pages.map((page, index) => (
-      <Button
-        key={`page-${page}-${index}`}
-        label={page.toString()}
-        variant={page === currentPage ? 'secondary' : 'primary'}
-        onClick={() => handleClick(page)}
-        disabled={page === '...'}
-      />
-    ));
-  };
-
-  return (
-    <div className="pagination-overlay">
-      {currentPage > 1 && (
+    return [
+      currentPage > 1 && (
         <Button
           label="Previous"
           variant="primary"
           onClick={() => handleClick(currentPage - 1)}
           disabled={currentPage === 1}
         />
-      )}
-      {renderButtons()}
-      {currentPage < totalPages && (
+      ),
+      ...pages.map((page, index) => (
+        <Button
+          key={`page-${page}-${index}`}
+          label={page.toString()}
+          variant={page === currentPage ? 'secondary' : 'primary'}
+          onClick={() => handleClick(page)}
+          disabled={page === '...'}
+        />
+      )),
+      currentPage < totalPages && (
         <Button
           label="Next"
           variant="primary"
           onClick={() => handleClick(currentPage + 1)}
           disabled={currentPage === totalPages}
         />
-      )}
-    </div>
-  );
+      ),
+    ];
+  };
+
+  return <div className="pagination-overlay">{renderButtons()}</div>;
 };
 
 Pagination.propTypes = {
