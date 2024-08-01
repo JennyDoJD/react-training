@@ -42,5 +42,44 @@
 - Clone the repository
 
 ```bash
-git clone https://github.com/JennyDoJD/react-training.git
+ git clone https://github.com/JennyDoJD/react-training.git
 ```
+
+- Move to the cloned repository folder
+
+```bash
+ cd react-training
+```
+
+- Checkout to branch feature/react-practice-one
+
+```bash
+ git checkout feature/react-practice-one
+```
+
+- Move to folder `practice`
+
+```bash
+ cd practice
+```
+
+- Move to folder `react-practice-one`
+
+```bash
+ cd react-practice-one
+```
+
+- Install packages
+
+```bash
+ npm install
+```
+
+- Run the Storybook
+
+```bash
+ npm run storybook
+```
+
+- Open your web browser and navigate to http://localhost:6006
+
