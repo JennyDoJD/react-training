@@ -31,7 +31,7 @@ const Pagination = ({
       }
     } else {
       if (currentPage <= 3) {
-        pages.push(1, 2, 3, 4, 5, ellipsis, totalPages);
+        pages.push(1, 2, 3, 4, ellipsis, totalPages);
       } else if (currentPage >= totalPages - 2) {
         pages.push(
           1,
@@ -63,23 +63,31 @@ const Pagination = ({
     return [
       currentPage > 1 && (
         <Button
+          key="previous"
           label="Previous"
           variant="primary"
           onClick={() => handleClick(currentPage - 1)}
           disabled={currentPage === 1}
         />
       ),
-      ...pages.map((page, index) => (
-        <Button
-          key={`page-${page}-${index}`}
-          label={page.toString()}
-          variant={page === currentPage ? 'secondary' : 'primary'}
-          onClick={() => handleClick(page)}
-          disabled={page === '...'}
-        />
-      )),
+      ...pages.map((page, index) =>
+        page === '...' ? (
+          <span key={`ellipsis-${index}`} className="pagination-ellipsis">
+            {page}
+          </span>
+        ) : (
+          <Button
+            key={`page-${page}`}
+            label={page.toString()}
+            variant={page === currentPage ? 'secondary' : 'primary'}
+            onClick={() => handleClick(page)}
+            disabled={page === '...'}
+          />
+        )
+      ),
       currentPage < totalPages && (
         <Button
+          key="next"
           label="Next"
           variant="primary"
           onClick={() => handleClick(currentPage + 1)}
