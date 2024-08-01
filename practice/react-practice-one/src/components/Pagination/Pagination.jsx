@@ -29,29 +29,32 @@ const Pagination = ({
       for (let page = 1; page <= totalPages; page++) {
         pages.push(page);
       }
+    }
+
+    const leftBound = Math.max(1, currentPage - 1);
+    const rightBound = Math.min(totalPages, currentPage + 1);
+
+    if (currentPage <= 3) {
+      pages.push(1, 2, 3, 4, ellipsis, totalPages);
+    } else if (currentPage >= totalPages - 2) {
+      pages.push(
+        1,
+        ellipsis,
+        totalPages - 3,
+        totalPages - 2,
+        totalPages - 1,
+        totalPages
+      );
     } else {
-      if (currentPage <= 3) {
-        pages.push(1, 2, 3, 4, ellipsis, totalPages);
-      } else if (currentPage >= totalPages - 2) {
-        pages.push(
-          1,
-          ellipsis,
-          totalPages - 3,
-          totalPages - 2,
-          totalPages - 1,
-          totalPages
-        );
-      } else {
-        pages.push(
-          1,
-          ellipsis,
-          currentPage - 1,
-          currentPage,
-          currentPage + 1,
-          ellipsis,
-          totalPages
-        );
-      }
+      pages.push(
+        1,
+        ellipsis,
+        leftBound,
+        currentPage,
+        rightBound,
+        ellipsis,
+        totalPages
+      );
     }
 
     return pages;
