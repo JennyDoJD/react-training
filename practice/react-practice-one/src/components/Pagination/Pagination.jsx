@@ -84,6 +84,10 @@ const Pagination = ({ currentPage, totalRecords, pageLimit, onPageChange }) => {
     ];
   };
 
+  if (totalPages <= 1) {
+    return null;
+  }
+
   return <div className="pagination-overlay">{renderButtons()}</div>;
 };
 
