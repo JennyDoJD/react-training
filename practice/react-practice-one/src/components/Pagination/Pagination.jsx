@@ -68,19 +68,23 @@ const Pagination = ({ currentPage, totalRecords, pageLimit, onPageChange }) => {
 
   return (
     <div className="pagination-overlay">
-      <Button
-        label="Previous"
-        variant="primary"
-        onClick={() => handleClick(currentPage - 1)}
-        disabled={currentPage === 1}
-      />
+      {currentPage > 1 && (
+        <Button
+          label="Previous"
+          variant="primary"
+          onClick={() => handleClick(currentPage - 1)}
+          disabled={currentPage === 1}
+        />
+      )}
       {renderButtons()}
-      <Button
-        label="Next"
-        variant="primary"
-        onClick={() => handleClick(currentPage + 1)}
-        disabled={currentPage === totalPages}
-      />
+      {currentPage < totalPages && (
+        <Button
+          label="Next"
+          variant="primary"
+          onClick={() => handleClick(currentPage + 1)}
+          disabled={currentPage === totalPages}
+        />
+      )}
     </div>
   );
 };
