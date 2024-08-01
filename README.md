@@ -6,7 +6,7 @@
 
 ## TIMELINE
 
-- 30 hours
+- 62 hours
 
 ## TEAM SIZE
 
