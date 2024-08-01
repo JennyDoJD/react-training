@@ -37,7 +37,6 @@ const Template = (args) => {
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-
     args.onPageChange(page);
   };
 
@@ -52,7 +51,7 @@ const Template = (args) => {
 
 export const Default = (args) => <Template {...args} />;
 Default.args = {
-  totalRecords: 30,
+  totalRecords: 100,
   pageLimit: 10,
-  currentPage: 2,
+  currentPage: 1,
 };
