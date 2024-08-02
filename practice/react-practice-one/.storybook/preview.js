@@ -1,5 +1,6 @@
 /** Import CSS */
 import '../src/styles/index.css';
+import '../src/storybook.css';
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
