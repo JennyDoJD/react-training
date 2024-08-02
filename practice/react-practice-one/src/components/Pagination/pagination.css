@@ -1,0 +1,12 @@
+.pagination-overlay {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.pagination-ellipsis {
+  cursor: default;
+  user-select: none;
+  color: #000;
+  padding: 14px;
+}
