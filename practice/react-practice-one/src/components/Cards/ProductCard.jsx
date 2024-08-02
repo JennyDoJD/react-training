@@ -46,7 +46,7 @@ const ProductCard = ({
                 {description.price}
               </Text>
               <span className="circle">&#8729;</span>
-              <Text variant="tertiary" className="text-tertiary text-desc">
+              <Text variant="tertiary" className="text-desc">
                 {description.quantity}
               </Text>
             </div>
