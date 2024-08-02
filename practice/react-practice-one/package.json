@@ -59,5 +59,13 @@
       "npm run format",
       "git add ."
     ]
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 80,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "endOfLine": "lf"
   }
 }
